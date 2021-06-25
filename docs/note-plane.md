@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### Note-Plane
 
 # Estructura general de proyecto
@@ -441,3 +442,7 @@ Se mostrara uan simulacion del funcionamiento esperado del proyecto con el propo
 | Accion                | Commit Hash |
 | --------------------- | ----------- |
 |  Creacion de MoqUps y definicion | 4fdef40976e90f67f806028e9f551d726b5d4df0 |
+=======
+hola
+prueba
+>>>>>>> 1172e7c (add md)
