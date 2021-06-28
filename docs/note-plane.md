@@ -498,6 +498,7 @@ _Responsable del proyecto_
 
 
 Proyecto basado en repositorio de Alejandro Salgado [ekiim](https://github.com/ekiim) Quien proporciono la base para este proyecto.
+<<<<<<< HEAD
 
 
 
@@ -505,3 +506,5 @@ Proyecto basado en repositorio de Alejandro Salgado [ekiim](https://github.com/e
 
 ---
 >>>>>>> c67da9a (Update de archivos necesarios)
+=======
+>>>>>>> a65d063 (note-plane md v2, plantilla base)
