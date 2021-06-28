@@ -44,9 +44,3 @@ _Responsable del proyecto_
 
 
 Proyecto basado en repositorio de Alejandro Salgado [ekiim](https://github.com/ekiim) Quien proporciono la base para este proyecto.
-
-
-
-
-
----
