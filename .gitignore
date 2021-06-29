@@ -2,5 +2,6 @@
 .env
 .gitignore
 .git
+FETCH_HEAD
 gcloud_key.json
 storage/
