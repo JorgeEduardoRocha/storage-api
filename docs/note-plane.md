@@ -1,46 +1,27 @@
-# Note Plane
+# Note-Plane
 
-_Una herramienta que permita tener apuntes de la manera mas simpre y eficiente posible_
+Note Plane se encag
 
-
-
-## Ejecutando las pruebas ⚙️
-
-_Aqui se agregaran instrucciones para poder hacer una demostracion del funcionamiento_
-
-```
-Da un ejemplo
-```
-
-### Y las pruebas de estilo de codificación ⌨️
-
-_Un ejemplo espesifico de su funcionamiento y una explicacion de como trabaja_
-
-```
-Da un ejemplo
-```
-
-## Despliegue 📦
-
-_Se anexaran pruebas de la herramienta en funcionamiento_
-
-## Construido con 🛠️
-
-_Herramientas y elementos que conformar el proyecto_
-
-* [Python](https://www.python.org/) - Lenguage de programacion principal
-* [Bottle](https://bottlepy.org/docs/dev/index.html#) - Framework web
-* [Parcel](https://parceljs.org/) - Usado para Construir paginas html
-* [Node js](https://nodejs.org/es/) - Usado para ejecutar JavaScript
-* [HTML](https://www.w3schools.com/html/) - Usado para Interfaz visual
-* [GIT](https://git-scm.com/) - Usado para generar los Registros del proyecto
+Consiste en:
 
 
-## Autor ✒️
+## API
 
-_Responsable del proyecto_
+| Path                  | Descripción |
+| --------------------- | ----------- |
+| `/note-plane/store`           |             |
+| `/note-plane/info/<id>`       |             |
+| `/note-plane/void`            |             |
 
-* **Jorge Eduardo** - *Desarrollo general* - [Aatomick](https://github.com/JorgeEduardoRocha)
 
+# Archivos Relacionados
 
-Proyecto basado en repositorio de Alejandro Salgado [ekiim](https://github.com/ekiim) Quien proporciono la base para este proyecto.
+ - `routes/dell-warranty.py`
+
+Prefijos de almacenamiento:
+
+ - `dell-warranty/`
+
+Tablas de Base de Datos
+
+> Pendiente o Nulo
