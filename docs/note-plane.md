@@ -11,7 +11,10 @@ Consiste en:
 | --------------------- | ----------- |
 | `/note-plane/store`           |             |
 | `/note-plane/info/<id>`       |             |
-| `/note-plane/void`            |             |
+| `/note-plane/note`            |             |
+| `/note-plane/date`            |             |
+| `/note-plane/create`            |             |
+| `/note-plane/consult`            |             |
 
 
 # Archivos Relacionados
