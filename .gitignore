@@ -2,7 +2,7 @@
 .env
 .gitignore
 .git
-FETCH_HEAD
+.FETCH_HEAD
 gcloud_key.json
 .cache/
 .storage/
