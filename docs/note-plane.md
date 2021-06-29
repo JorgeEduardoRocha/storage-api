@@ -11,7 +11,7 @@ Consiste en:
 | --------------------- | ----------- |
 | `/note-plane/consult`           | Se podran consultar las notas almacenadas con su nombre            |
 | `/note-plane/consult/<key>`           | Se podran consultar las notas almacenadas con una palabra clave            |
-| `/note-plane/consult/<creator>`       | Se mostraran los creadores de notas           |
+| `/note-plane/consult/<creator>`       | Se mostraran las notas de un creador en espesifico           |
 | `/note-plane/creator/`       | Se mostraran los creadores de notas           |
 | `/note-plane/note-info/<name>`            | Se mostrara toda la informacion relacionada a la nota seleccionada            |
 | `/note-plane/date`            | Se mostrara la fecha de creacion de la nota            |
