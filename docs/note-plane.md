@@ -458,9 +458,9 @@ prueba
 # Note-Plane
 >>>>>>> dc9784e (Nuevo doc)
 
-Note Plane se encag
+## En que consiste Note-Plane
+  La principal funcion de Note-Plane es el poder crear, almacenas y consultar notas en un formato de texto plano de la manera mas simple posible, y que se pueda acceder desde cualquier navegador para poder tener tus notas disponibles en todo momento.
 
-Consiste en:
 
 
 ## API
@@ -479,11 +479,11 @@ Consiste en:
 
 # Archivos Relacionados
 
- - `routes/dell-warranty.py`
+ - `routes/note-plane.py`
 
 Prefijos de almacenamiento:
 
- - `dell-warranty/`
+ - `note-plane/`
 
 Tablas de Base de Datos
 
