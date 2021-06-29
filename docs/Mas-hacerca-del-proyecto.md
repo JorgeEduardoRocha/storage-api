@@ -30,7 +30,7 @@ _Herramientas y elementos que conformar el proyecto_
 
 * [Python](https://www.python.org/) - Lenguage de programacion principal
 * [Bottle](https://bottlepy.org/docs/dev/index.html#) - Framework web
-* [Parcel](https://parceljs.org/) - Usado para Construir paginas html
+* [Parcel](https://parceljs.org/) - Usado para crear un cliente
 * [Node js](https://nodejs.org/es/) - Usado para ejecutar JavaScript
 * [HTML](https://www.w3schools.com/html/) - Usado para Interfaz visual
 * [GIT](https://git-scm.com/) - Usado para generar los Registros del proyecto
