@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### Note-Plane
 
 # Estructura general de proyecto
@@ -453,31 +454,35 @@ prueba
 =======
 # Note Plane
 >>>>>>> 0f25573 (note-plane md v1, plantilla base)
+=======
+# Note-Plane
+>>>>>>> dc9784e (Nuevo doc)
 
-_Una herramienta que permita tener apuntes de la manera mas simpre y eficiente posible_
+Note Plane se encag
+
+Consiste en:
 
 
+## API
 
-## Ejecutando las pruebas ⚙️
+| Path                  | Descripción |
+| --------------------- | ----------- |
+| `/note-plane/store`           |             |
+| `/note-plane/info/<id>`       |             |
+| `/note-plane/void`            |             |
 
-_Aqui se agregaran instrucciones para poder hacer una demostracion del funcionamiento_
 
-```
-Da un ejemplo
-```
+# Archivos Relacionados
 
-### Y las pruebas de estilo de codificación ⌨️
+ - `routes/dell-warranty.py`
 
-_Un ejemplo espesifico de su funcionamiento y una explicacion de como trabaja_
+Prefijos de almacenamiento:
 
-```
-Da un ejemplo
-```
+ - `dell-warranty/`
 
-## Despliegue 📦
+Tablas de Base de Datos
 
-_Se anexaran pruebas de la herramienta en funcionamiento_
-
+<<<<<<< HEAD
 ## Construido con 🛠️
 
 _Herramientas y elementos que conformar el proyecto_
@@ -508,3 +513,6 @@ Proyecto basado en repositorio de Alejandro Salgado [ekiim](https://github.com/e
 >>>>>>> c67da9a (Update de archivos necesarios)
 =======
 >>>>>>> a65d063 (note-plane md v2, plantilla base)
+=======
+> Pendiente o Nulo
+>>>>>>> dc9784e (Nuevo doc)
