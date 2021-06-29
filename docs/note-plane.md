@@ -13,10 +13,10 @@ Consiste en:
 | `/note-plane/consult/<key>`           | Se podran consultar las notas almacenadas con una palabra clave            |
 | `/note-plane/consult/<creator>`       | Se mostraran los creadores de notas           |
 | `/note-plane/creator/`       | Se mostraran los creadores de notas           |
-| `/note-plane/note`            |             |
-| `/note-plane/date`            |             |
-| `/note-plane/create`            |             |
-| `/note-plane/consult`            |             |
+| `/note-plane/note-info/<name>`            | Se mostrara toda la informacion relacionada a la nota seleccionada            |
+| `/note-plane/date`            | Se mostrara la fecha de creacion de la nota            |
+| `/note-plane/create/note`            | Se podran crear notas            |
+
 
 
 # Archivos Relacionados
