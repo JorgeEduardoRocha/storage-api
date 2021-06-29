@@ -9,7 +9,8 @@ Consiste en:
 
 | Path                  | Descripción |
 | --------------------- | ----------- |
-| `/note-plane/store`           |             |
+| `/note-plane/consult`           | Se podran consultar las notas almacenadas con su nombre            |
+| `/note-plane/consult/<key`           | Se podran consultar las notas almacenadas con una palabra clave            |
 | `/note-plane/info/<id>`       |             |
 | `/note-plane/note`            |             |
 | `/note-plane/date`            |             |
