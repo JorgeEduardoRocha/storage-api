@@ -17,7 +17,7 @@
 | `/note-plane/date`            | Se mostrara la fecha de creacion de la nota            |
 | `/note-plane/create/note`            | Se podran crear notas            |
 
-
+Como
 
 # Archivos Relacionados
 
