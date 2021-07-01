@@ -476,7 +476,7 @@ prueba
 | `/note-plane/create/note`            | Se podran crear notas            |
 
 ---
-Otro partado en proceso, andamos en obra negra aun
+Otro Apartado en proceso, andamos en obra negra aun
 ---
 
 
@@ -495,11 +495,11 @@ El funcinamiento de la API sera mediante rutas HTTP, con un verbo/método en esp
 
 ### Operaciones de Almacenamiento de datos
 ##### Operaciones de Notas
-- Cear una nota
+###### Cear una nota
   - Solicitar Titulo de nota y categorias
   - Solicitar contenido de la nota
   - El identificador se agregara de manera automatica
-- Editar una nota
+###### Editar una nota
   - Eliminar una nota
   - Cambiar contenido de una nota
 
