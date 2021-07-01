@@ -129,7 +129,7 @@ Mensaje de fallo
 200 regresa la nota que corresponda
 D.O.M, regresa mensaje de nota no encontrada 404
 
-
+---
 >
 GET /alumno/<matricula>
 200, datos de alumno con matricula
@@ -154,6 +154,7 @@ POST /materia/<periodo>/<clave>/<matricula>/calificar
 D.O.M, regresa mensaje de fallo
 Ejemplo para el uso de curl
 Para hacer peticiones HTTP podemos utilizar diversas herramientas, como puede ser POSTMAN, el modulo requests de python o curl mismo.<
+---
 
 curl es un programar que se utiliza en una terminal tipo posix, por lo tanto adoptaremos notacion de archivo de script para un shell posix.
 
