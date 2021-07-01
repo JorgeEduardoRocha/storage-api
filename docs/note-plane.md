@@ -494,6 +494,8 @@ Entidades con las cuales funcoonara la API
 El funcinamiento de la API sera mediante rutas HTTP, con un verbo/método en especifico.
 
 ### Operaciones de Almacenamiento de datos
+
+
 ##### Operaciones de Notas
 ###### Cear una nota
   - Solicitar Titulo de nota y categorias
@@ -503,20 +505,22 @@ El funcinamiento de la API sera mediante rutas HTTP, con un verbo/método en esp
   - Eliminar una nota
   - Cambiar contenido de una nota
 
+
 #### Operaciones de Creadores
 ###### Registrar un creador
   - solicitar nombre, correo electronico, nickname, contrasena
   - El identificador se agregara de manera automatica
+###### Editar un creador
+  - Eliminar un creador
+  - Cambiar informacion del creador
 
-##### Operaciones de materias
-###### Registrar una materia
-solcitiamos nombre de la materia, clave, numero de empleado del profesor, y periodo en que sera impartida
 
-##### Operaciones de Calificaciones
-###### Registrar a un alumno en el curso
-- Solicitamos periodo, materia_clave, profe_no_emp, matricula del alumno.
-###### Registrar calificación para un alumno
-- Solicitamos periodo, materia_clave, matricula del alumno, y calificación
+##### Operaciones de catefgorias
+###### Registrar a una categoria
+- Solicitamos nombre, descripcion.
+###### editar una categoria 
+- Eliminar una categoria
+- Cambiar informacion de una categoria
 
 
 Esta es la manera en la cual almacenaremos los datos.
