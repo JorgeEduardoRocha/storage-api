@@ -463,17 +463,7 @@ prueba
 
 
 
-## Rutas de la API
 
-| Path                  | Descripción |
-| --------------------- | ----------- |
-| `/note-plane/consult`           | Se podran consultar las notas almacenadas con su nombre            |
-| `/note-plane/consult/<key>`           | Se podran consultar las notas almacenadas con una palabra clave            |
-| `/note-plane/consult/<creator>`       | Se mostraran las notas de un creador en espesifico           |
-| `/note-plane/creator/`       | Se mostraran los creadores de notas           |
-| `/note-plane/note-info/<name>`            | Se mostrara toda la informacion relacionada a la nota seleccionada            |
-| `/note-plane/date`            | Se mostrara la fecha de creacion de la nota            |
-| `/note-plane/create/note`            | Se podran crear notas            |
 
 ---
 Otro Apartado en proceso, andamos en obra negra aun
@@ -526,43 +516,65 @@ El funcinamiento de la API sera mediante rutas HTTP, con un verbo/método en esp
 Esta es la manera en la cual almacenaremos los datos.
 
 ## Operaciones de consulta de datos
-- Solicitar datos de un alumno
+
+- Consultar notas
   - básicos
-  - con cursos
-  - con cursos activos
-todas las calificaciones
-calificaciones por periodo
-Solicitar datos de un profe
-básico
-con historial de materias
-con materias activas materias
-Solicitar datos de una materia
-Lista de profes
-Activos
-Todos
-Lista de Alumnos
-Activos
-Por Materia
-Todos
-Lista de Materias
-Por Periodo
-Todos
-Con datos del profesor
-Con resumen de alumnos
-Estructuras de solicitud y respuesta
-Registro de alumno
+  - con fecha
+  - con creadore
+  - con Titulo
+  - identificador
+
+- Consultar creadores  
+  - basico
+  - identificador
+  - nombre
+  - nickname
+
+- Consultar categoria
+  - basico
+  - identificador
+  - nombre
+  - conjunto de categorias      
+
+- consultar por filtros
+  - basico
+  - datos conocidos de la nota
+  - texto en el contenido
+  - varias categorias
+  - filtros en conjuntos espesificos (catefgorias, fecha, nombre, creador)
+
+
+
+## Estructuras de solicitud y respuesta
+
+### Registro de alumno
 {
     "nombre": "Juanito Johns",
     "fecha_de_nacimiento": "1990-01-01"
 }
-Respuesta de registro de alumno exitoso
+
+### Respuesta de registro de alumno exitoso
 { "matricula": "XX-XX-XX-00" }
 Mensaje de fallo
 {
     "code": 500,
     "message": "mensaje de error"
 }
-Pendiente
+
+## mas ejemplos despues
+
+
+## Rutas de la API
+
+| Path                  | Descripción |
+| --------------------- | ----------- |
+| `/note-plane/consult`           | Se podran consultar las notas almacenadas con su nombre            |
+| `/note-plane/consult/<key>`           | Se podran consultar las notas almacenadas con una palabra clave            |
+| `/note-plane/consult/<creator>`       | Se mostraran las notas de un creador en espesifico           |
+| `/note-plane/creator/`       | Se mostraran los creadores de notas           |
+| `/note-plane/note-info/<name>`            | Se mostrara toda la informacion relacionada a la nota seleccionada            |
+| `/note-plane/date`            | Se mostrara la fecha de creacion de la nota            |
+| `/note-plane/create/note`            | Se podran crear notas            |
 
 Implementación de rutas para los recursos
 POST /alumno
