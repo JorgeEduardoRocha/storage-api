@@ -518,18 +518,18 @@ El funcinamiento de la API sera mediante rutas HTTP, con un verbo/método en esp
 ##### Operaciones de catefgorias
 ###### Registrar a una categoria
 - Solicitamos nombre, descripcion.
-###### editar una categoria 
+###### editar una categoria
 - Eliminar una categoria
 - Cambiar informacion de una categoria
 
 
 Esta es la manera en la cual almacenaremos los datos.
 
-Operaciones de consulta de datos
-Solicitar datos de un alumno
-básicos
-con cursos
-con cursos activos
+## Operaciones de consulta de datos
+- Solicitar datos de un alumno
+  - básicos
+  - con cursos
+  - con cursos activos
 todas las calificaciones
 calificaciones por periodo
 Solicitar datos de un profe
