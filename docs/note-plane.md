@@ -5,7 +5,7 @@
 
 
 
-## API
+## Rutas de la API
 
 | Path                  | Descripción |
 | --------------------- | ----------- |
