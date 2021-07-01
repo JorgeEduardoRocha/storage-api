@@ -45,10 +45,10 @@ El funcinamiento de la API sera mediante rutas HTTP, con un verbo/método en esp
   - Eliminar una nota
   - Cambiar contenido de una nota
 
-#### Operaciones de profes
-###### Registrar un Profe
-  - solicitamos nombre, edad y titulo
-  - numero de empleado sera asignado de manera automatica ya que sera nuestro identificador unico
+#### Operaciones de Creadores
+###### Registrar un creador
+  - solicitar nombre, correo electronico, nickname, contrasena
+  - El identificador se agregara de manera automatica
 
 ##### Operaciones de materias
 ###### Registrar una materia
