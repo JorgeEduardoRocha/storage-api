@@ -118,14 +118,19 @@ Mensaje de fallo
 | `/note-plane/date`            | Se mostrara la fecha de creacion de la nota            |
 | `/note-plane/create/note`            | Se podran crear notas            |
 
-Implementación de rutas para los recursos
-POST /alumno
-recibe una estructura de registor de alumo
-201, registrar alumno regresa estructura de matricula para nuevo alumno
-D.O.M, regresa estructura de mensaje de fallo
-GET /alumno/listar
-200 regresa una lista de alumnos
-D.O.M, regresa mensaje de fallo en formato json
+## Implementación de rutas para los recursos
+
+#### POST /note
+- Recibe datos de creacion de notas
+- 201,Crear nota y regresar identificador de la nota
+- D.O.M, regresa estructura de mensaje de fallo
+
+#### GET /note/id
+200 regresa la nota que corresponda
+D.O.M, regresa mensaje de nota no encontrada 404
+
+
+>
 GET /alumno/<matricula>
 200, datos de alumno con matricula
 D.O.M, regresa mensaje de fallo en formato json
@@ -148,7 +153,7 @@ POST /materia/<periodo>/<clave>/<matricula>/calificar
 201, asignar una calificacion a un alumno
 D.O.M, regresa mensaje de fallo
 Ejemplo para el uso de curl
-Para hacer peticiones HTTP podemos utilizar diversas herramientas, como puede ser POSTMAN, el modulo requests de python o curl mismo.
+Para hacer peticiones HTTP podemos utilizar diversas herramientas, como puede ser POSTMAN, el modulo requests de python o curl mismo.<
 
 curl es un programar que se utiliza en una terminal tipo posix, por lo tanto adoptaremos notacion de archivo de script para un shell posix.
 
