@@ -546,26 +546,29 @@ Esta es la manera en la cual almacenaremos los datos.
   - filtros en conjuntos espesificos (catefgorias, fecha, nombre, creador)
 
 
-
+---
 ## Estructuras de solicitud y respuesta
 
-### Registro de alumno
+### Registro de nota
 {
-    "nombre": "Juanito Johns",
-    "fecha_de_nacimiento": "1990-01-01"
+    "titulo": "nota de ejemplo",
+    "categoria": "",
+    "contenido": "",
+    "fecha de creacion": "xxxx-xx-xx"
 }
 
 ### Respuesta de registro de alumno exitoso
-{ "matricula": "XX-XX-XX-00" }
-Mensaje de fallo
+{ "id": "XXXX" }
+
+### Mensaje de fallo
 {
     "code": 500,
-    "message": "mensaje de error"
+    "message": "No se pudo crear la nota"
 }
 
 ## mas ejemplos despues
 
-
+---
 ## Rutas de la API
 
 | Path                  | Descripción |
