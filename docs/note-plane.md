@@ -578,6 +578,10 @@ Mensaje de fallo
 | `/note-plane/date`            | Se mostrara la fecha de creacion de la nota            |
 | `/note-plane/create/note`            | Se podran crear notas            |
 
+---
+agregar verbos HTTP ^
+---
+
 ## Implementación de rutas para los recursos
 
 #### POST /note
