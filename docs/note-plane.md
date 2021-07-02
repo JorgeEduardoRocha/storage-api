@@ -116,7 +116,7 @@ Mensaje de fallo
 | `/note-plane/query/<key>`           | Se podran consultar las notas almacenadas con una palabra clave            |
 | `/note-plane/query/<creator>`       | Se mostraran las notas de un creador en espesifico           |
 | `/note-plane/creator/`       | Se mostraran los creadores de notas           |
-| `/note-plane/note-info/<name>`            | Se mostrara toda la informacion relacionada a la nota seleccionada            |
+| `/note-plane/info/<name>`            | Se mostrara toda la informacion relacionada a la nota seleccionada            |
 | `/note-plane/date`            | Se mostrara la fecha de creacion de la nota            |
 | `/note-plane/create/note`            | Se podran crear notas            |
 
