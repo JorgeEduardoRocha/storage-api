@@ -191,6 +191,10 @@ Esta es la manera en la cual almacenaremos los datos.
 | `/note/category/<name>` | Se se mostraran las notas que correspondan a esa categoria |
 | `/note/create/note`     | Se podran crear notas |
 
+---
+agregar verbos HTTP ^
+---
+
 ## Implementación de rutas para los recursos
 
 ### POST /create/note
