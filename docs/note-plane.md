@@ -488,18 +488,20 @@ El funcinamiento de la API sera mediante rutas HTTP, con un verbo/método en esp
 
 ##### Operaciones de Notas
 ###### Cear una nota
-  - Solicitar Titulo de nota y categorias
-  - Solicitar contenido de la nota
+  - Solicitar Titulo de nota y categorias(opcional)
+  - Solicitar contenido de la nota(opcional)
   - El identificador se agregara de manera automatica
 ###### Editar una nota
-  - Eliminar una nota
   - Cambiar contenido de una nota
-
+###### elimina una nota
+  - Eliminar una nota
 
 #### Operaciones de Creadores
-###### Registrar un creador
+###### Registrar un creador (no usare usuario yo)
   - solicitar nombre, correo electronico, nickname, contrasena
   - El identificador se agregara de manera automatica
+
+
 ###### Editar un creador
   - Eliminar un creador
   - Cambiar informacion del creador
@@ -568,9 +570,9 @@ Mensaje de fallo
 
 | Path                  | Descripción |
 | --------------------- | ----------- |
-| `/note-plane/consult`           | Se podran consultar las notas almacenadas con su nombre            |
-| `/note-plane/consult/<key>`           | Se podran consultar las notas almacenadas con una palabra clave            |
-| `/note-plane/consult/<creator>`       | Se mostraran las notas de un creador en espesifico           |
+| `/note-plane/query`           | Se podran consultar las notas almacenadas con su nombre            |
+| `/note-plane/query/<key>`           | Se podran consultar las notas almacenadas con una palabra clave            |
+| `/note-plane/query/<creator>`       | Se mostraran las notas de un creador en espesifico           |
 | `/note-plane/creator/`       | Se mostraran los creadores de notas           |
 | `/note-plane/note-info/<name>`            | Se mostrara toda la informacion relacionada a la nota seleccionada            |
 | `/note-plane/date`            | Se mostrara la fecha de creacion de la nota            |
