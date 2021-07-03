@@ -111,20 +111,21 @@ Esta es la manera en la cual almacenaremos los datos.
 ## mas ejemplos despues
 
 ---
+
 ## Rutas de la API
 
 | Path                  | Descripción |
 | --------------------- | ----------- |
-| `/note-plane/query`           | Se podran consultar las notas almacenadas con su nombre            |
-| `/note-plane/query/<key>`           | Se podran consultar las notas almacenadas con una palabra clave            |
-| `/note-plane/query/<creator>`       | Se mostraran las notas de un creador en espesifico           |
-| `/note-plane/creator/`       | Se mostraran los creadores de notas           |
-| `/note-plane/info/<name>`            | Se mostrara toda la informacion relacionada a la nota seleccionada            |
-| `/note-plane/date`            | Se mostrara la fecha de creacion de la nota            |
-| `/note-plane/create/note`            | Se podran crear notas            |
+| `/note/query`           | Se podran consultar las notas almacenadas con su nombre |
+| `/note/query/<key>`     | Se podran consultar las notas almacenadas con una palabra clave  |
+| `/note/query/<creator>` | Se mostraran las notas de un creador en espesifico |
+| `/note/creator/`        | Se mostraran los creadores de notas |
+| `/note/info/<name>`     | Se mostrara toda la informacion relacionada a la nota seleccionada   |
+| `/note/date`            | Se mostrara la fecha de creacion de la nota |
+| `/note/create/note`     | Se podran crear notas |
 
 ---
-agregar verbos HTTP ^
+agregar verbos HTTP
 ---
 
 ## Implementación de rutas para los recursos
