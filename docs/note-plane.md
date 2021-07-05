@@ -50,7 +50,7 @@ El funcinamiento de la API sera mediante rutas HTTP, con un verbo/método en esp
 
 Esta es la manera en la cual almacenaremos los datos.
 
----
+
 ## Operaciones de consulta de datos
 
 - Consultar notas
@@ -78,9 +78,8 @@ Esta es la manera en la cual almacenaremos los datos.
   - texto en el contenido
   - varias categorias
   - filtros en conjuntos espesificos (catefgorias, fecha, nombre, creador)
----
 
----
+
 ## Estructuras de solicitud y respuesta
 
 ### Registro de nota
