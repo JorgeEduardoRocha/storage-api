@@ -8,7 +8,7 @@
 
 
 ---
-Otro Apartado en proceso, andamos en obra negra aun
+apartado reservado para presentacion
 ---
 
 
@@ -28,7 +28,7 @@ El funcinamiento de la API sera mediante rutas HTTP, con un verbo/método en esp
 ### Operaciones de Almacenamiento de datos
 
 
-##### Operaciones de Notas
+#### Operaciones de Notas
 ###### Cear una nota
   - Solicitar Titulo de nota y categorias(opcional)
   - Solicitar contenido de la nota(opcional)
@@ -39,7 +39,7 @@ El funcinamiento de la API sera mediante rutas HTTP, con un verbo/método en esp
   - Eliminar una nota
 
 
-##### Operaciones de catefgorias
+#### Operaciones de catefgorias
 ###### Registrar a una categoria
 - Solicitamos nombre, descripcion.
 ###### Eliminar una categoria
@@ -90,7 +90,7 @@ Esta es la manera en la cual almacenaremos los datos.
     "fecha de creacion": "xxxx-xx-xx"
 }
 
-### Respuesta de registro de alumno exitoso
+### Respuesta de registro de nota exitoso
 { "id": "XXXX" }
 
 ### Mensaje de fallo
@@ -130,6 +130,10 @@ agregar verbos HTTP
 200 regresa la nota que corresponda
 D.O.M, regresa mensaje de nota no encontrada 404
 
+
+####GET /note/<creador>
+200, regresa la nota que correspondan a ese creador
+D.O.M, regresa mensaje de creador no encontrado 
 ---
 >
 GET /alumno/<matricula>
