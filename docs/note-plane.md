@@ -38,27 +38,19 @@ El funcinamiento de la API sera mediante rutas HTTP, con un verbo/método en esp
 ###### elimina una nota
   - Eliminar una nota
 
-#### Operaciones de Creadores
-###### Registrar un creador (no usare usuario yo)
-  - solicitar nombre, correo electronico, nickname, contrasena
-  - El identificador se agregara de manera automatica
-
-
-###### Editar un creador
-  - Eliminar un creador
-  - Cambiar informacion del creador
-
 
 ##### Operaciones de catefgorias
 ###### Registrar a una categoria
 - Solicitamos nombre, descripcion.
-###### editar una categoria
+###### Eliminar una categoria
 - Eliminar una categoria
+###### Editar una categoria
 - Cambiar informacion de una categoria
 
 
 Esta es la manera en la cual almacenaremos los datos.
 
+---
 ## Operaciones de consulta de datos
 
 - Consultar notas
@@ -72,7 +64,7 @@ Esta es la manera en la cual almacenaremos los datos.
   - basico
   - identificador
   - nombre
-  - nickname
+  - username
 
 - Consultar categoria
   - basico
@@ -86,7 +78,7 @@ Esta es la manera en la cual almacenaremos los datos.
   - texto en el contenido
   - varias categorias
   - filtros en conjuntos espesificos (catefgorias, fecha, nombre, creador)
-
+---
 
 ---
 ## Estructuras de solicitud y respuesta
@@ -110,7 +102,7 @@ Esta es la manera en la cual almacenaremos los datos.
 
 ## mas ejemplos despues
 
----
+
 
 ## Rutas de la API
 
