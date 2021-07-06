@@ -16,8 +16,26 @@ mayor cantidad de dispositivos posibles en todo momento.
 
 ### Motivaciones y proposito de Note-plane
 
+La principal motivacion para desarrolar este proyecro es el de poder tener la capacidad de administrar de mejor manera nuestras
+notas de texto plano y poder tenerlas en todo momento y en todo sitio, con el proposito de poder ser una alternativa solida
+al momento de pensar en notas online.
 
 ### Razon de ser de Note-Plane
+A continuacion se contestaran algunas preguntas que pueden surgir al respecto de este proyecto.
+
+- ¿Quien es el publico objetivo de este proyecto?
+
+
+- ¿Cual es la solucion especifica que plantea este proyecto?
+
+
+- ¿Que recursos se necesitan para iniciar trabajo sobre este proyecto? (Recurso humano, recurso de computo, infrestructura para el despligue)
+  - Dispositivo con conexion a internet
+  - ordenador capas de correr codigo de python y un entorno http
+  - Persona con conocimeinto basico en formatos json, http, python y 
+
+
+- ¿Que clase de trabajo operativo resultara de culminar este proyecto y desplegar el proyecto?
 
 ---
 
@@ -181,7 +199,7 @@ curl -qv \
     -H "${HEADER_1}" \
     -H "${HEADER_2}" \
     -d "$DATA"
->Estrutura basica de interaccion<
+>Estrutura basica de interaccion
 
 - Solicitar Titulo de nota y categorias(opcional)
 - Solicitar contenido de la nota(opcional)
@@ -209,10 +227,10 @@ crear la nota se agregara un identificador reconocido como  `KEY`, con esto ya s
 
 # Usuarios y autentificacion
 >
-- Leer todo, editar solo las notas propias: (app:notes:read:all, app:notes:write:self),
-- Leer todo, y editar todo UserA: (app:notes:read:all, app:notes:write:all),
+- Leer todo, editar solo las notas propias: (app: notes:read:all, app: notes:write:self),
+- Leer todo, y editar todo UserA: (app: notes:read:all, app: notes:write:all),
 
->Solo se tomaran estas validades para trabajar <
+>Solo se tomaran estas validades para trabajar
 
 
 # Archivos Relacionados
