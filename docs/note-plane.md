@@ -196,14 +196,14 @@ utilizara, depues de esto el programa requiere resibir un usuario para poder cre
 siendo la unica implesindible el nombre de la nota pudiendo ir los otros dos cambos vacios por el momento, y al momento de
 crear la nota se agregara un identificador reconocido como  `KEY`, con esto ya se tendra la nota creada
 
-| URL_HOST=http://localhost:8080
-ROUTE=/note/create
-METHOD=POST
-HEADER_1='Content-Type: application/json'
-HEADER_2="Authorization: Bearer ${TOKEN}"
-DATA='{"name":"nota de ejemplo", "category":"Robots",
+- URL_HOST=http://localhost:8080
+- ROUTE=/note/create
+- METHOD=POST
+- HEADER_1='Content-Type: application/json'
+- HEADER_2="Authorization: Bearer ${TOKEN}"
+- DATA='{"name":"nota de ejemplo", "category":"Robots",
         "content":""
-        }' | 
+        }'
 
 ---
 
