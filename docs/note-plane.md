@@ -461,6 +461,8 @@ prueba
 ## En que consiste Note-Plane
   La principal funcion de Note-Plane es el poder crear, almacenas y consultar notas en un formato de texto plano de la manera mas simple posible, y que se pueda acceder desde cualquier navegador para poder tener tus notas disponibles en todo momento.
 
+  El mercado al cual se enfoca este proyecto es un mercado de nicho para personas que quieren una manera simple de crear, consultar y almacenar notas en formato de texto plano y sobre todo tener la posibilidad de poder acceder a ellas desde mayor cantidad de dispositivos posibles en todo momento.
+
 
 
 
@@ -571,6 +573,8 @@ Esta es la manera en la cual almacenaremos los datos.
 | `/note/creator/`        | Se mostraran los creadores de notas |
 | `/note/info/<name>`     | Se mostrara toda la informacion relacionada a la nota seleccionada   |
 | `/note/date`            | Se mostrara la fecha de creacion de la nota |
+| `/note/category/create` | Se podra crear una nueva categoria |
+| `/note/category/<name>` | Se se mostraran las notas que correspondan a esa categoria |
 | `/note/create/note`     | Se podran crear notas |
 
 ---
@@ -579,19 +583,40 @@ agregar verbos HTTP
 
 ## Implementación de rutas para los recursos
 
-#### POST /note
+### POST /create/note
 - Recibe datos de creacion de notas
 - 201,Crear nota y regresar identificador de la nota
 - D.O.M, regresa estructura de mensaje de fallo
 
-#### GET /note/id
-200 regresa la nota que corresponda
-D.O.M, regresa mensaje de nota no encontrada 404
+### GET /query/<key>
+- 200 regresa la nota que corresponda
+- D.O.M, regresa mensaje de nota no encontrada 404
+
+### GET /query/<creador>
+- 200, regresa la nota que correspondan a ese creador
+- D.O.M, regresa mensaje de creador no encontrado
+
+### GET /query/category
+- 200, regresa la nota que correspondan a esa categoria
+- D.O.M, regresa mensaje de categoria no encontrada
+
+### GET /query/<name>
+- 200, regresa la nota que correspondan a ese nombre
+- D.O.M, regresa mensaje de fallo en formato json
+
+### GET /category/<name>
+- 200, regresa la nota que correspondan a ese nombre
+- D.O.M, regresa mensaje de fallo en formato json
+
+### POST /category/create
+- 201, registrar una nueva categoria
+- D.O.M, regresa mensaje de fallo
+
+### GET /alumno/<matricula>
+- 200, datos de alumno con matricula
+- D.O.M, regresa mensaje de fallo en formato json
 
 
-####GET /note/<creador>
-200, regresa la nota que correspondan a ese creador
-D.O.M, regresa mensaje de creador no encontrado 
 ---
 >
 GET /alumno/<matricula>
