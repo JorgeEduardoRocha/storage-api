@@ -458,22 +458,30 @@ prueba
 # Note-Plane
 >>>>>>> dc9784e (Nuevo doc)
 
-## En que consiste Note-Plane
+## Introduccion a Note-Plane
 
 La principal funcion de Note-Plane es el poder crear, almacenas y consultar notas en un formato de texto plano de la
 manera mas simple posible, y que se pueda acceder desde cualquier navegador para poder tener tus notas disponibles en
 todo momento.
 
-El mercado al cual se enfoca este proyecto es un mercado de nicho para personas que quieren una manera simple de crear,
+El enfoque de este proyecto es un nicho de personas que quieren una manera simple de crear,
 consultar y almacenar notas en formato de texto plano y sobre todo tener la posibilidad de poder acceder a ellas desde
 mayor cantidad de dispositivos posibles en todo momento.
 
-Debido a lo comentado anteriomente se espera el poder alcanzar un publico el
+
 
 
 
 ---
-apartado reservado para presentacion
+# ¿Que es Note-plane?
+
+### Motivaciones y proposito de Note-plane
+
+
+### Razon de ser de Note-Plane
+
+
+
 ---
 
 
@@ -578,7 +586,7 @@ Esta es la manera en la cual almacenaremos los datos.
 | `/note/creator/`        | Se mostraran los creadores de notas |
 | `/note/info/<name>`     | Se mostrara toda la informacion relacionada a la nota seleccionada   |
 | `/note/date`            | Se mostrara la fecha de creacion de la nota |
-| `/note/category/create` | Se podra crear una nueva categoria |
+| `/note/create/category` | Se podra crear una nueva categoria |
 | `/note/category/<name>` | Se se mostraran las notas que correspondan a esa categoria |
 | `/note/create/note`     | Se podran crear notas |
 
@@ -610,16 +618,17 @@ agregar verbos HTTP
 - D.O.M, regresa mensaje de fallo en formato json
 
 ### GET /category/<name>
-- 200, regresa la nota que correspondan a ese nombre
-- D.O.M, regresa mensaje de fallo en formato json
+- 200, regresa las notas que correspondan a esa categoria
+- D.O.M, regresa mensaje de fallo general
 
-### POST /category/create
+### POST /create/category
 - 201, registrar una nueva categoria
 - D.O.M, regresa mensaje de fallo
 
-### GET /alumno/<matricula>
-- 200, datos de alumno con matricula
-- D.O.M, regresa mensaje de fallo en formato json
+### GET /info/<key>
+- 200, Datos detallados de la nota espesifica que corresponda a la key escrita
+- D.O.M, regresa mensaje de contenido enextitente (404)
+
 
 
 ---
@@ -665,6 +674,14 @@ curl -qv \
     -H "${HEADER_1}" \
     -H "${HEADER_2}" \
     -d "$DATA"
+
+# Usuarios y autentificacion
+>
+- Leer todo, editar solo las notas propias: (app:notes:read:all, app:notes:write:self),
+- Leer todo, y editar todo UserA: (app:notes:read:all, app:notes:write:all),
+
+>Solo se tomaran estas validades para trabajar <
+
 
 # Archivos Relacionados
 
