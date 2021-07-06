@@ -1,11 +1,16 @@
 # Note-Plane
 
 ## En que consiste Note-Plane
-  La principal funcion de Note-Plane es el poder crear, almacenas y consultar notas en un formato de texto plano de la manera mas simple posible, y que se pueda acceder desde cualquier navegador para poder tener tus notas disponibles en todo momento.
 
-  El mercado al cual se enfoca este proyecto es un mercado de nicho para personas que quieren una manera simple de crear, consultar y almacenar notas en formato de texto plano y sobre todo tener la posibilidad de poder acceder a ellas desde mayor cantidad de dispositivos posibles en todo momento.
+La principal funcion de Note-Plane es el poder crear, almacenas y consultar notas en un formato de texto plano de la
+manera mas simple posible, y que se pueda acceder desde cualquier navegador para poder tener tus notas disponibles en
+todo momento.
 
+El mercado al cual se enfoca este proyecto es un mercado de nicho para personas que quieren una manera simple de crear,
+consultar y almacenar notas en formato de texto plano y sobre todo tener la posibilidad de poder acceder a ellas desde
+mayor cantidad de dispositivos posibles en todo momento.
 
+Debido a lo comentado anteriomente se espera el poder alcanzar un publico el
 
 
 
