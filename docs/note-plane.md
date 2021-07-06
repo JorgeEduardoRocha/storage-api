@@ -11,9 +11,6 @@ consultar y almacenar notas en formato de texto plano y sobre todo tener la posi
 mayor cantidad de dispositivos posibles en todo momento.
 
 
-
-
-
 ---
 # ¿Que es Note-plane?
 
@@ -21,8 +18,6 @@ mayor cantidad de dispositivos posibles en todo momento.
 
 
 ### Razon de ser de Note-Plane
-
-
 
 ---
 
@@ -36,9 +31,9 @@ Entidades con las cuales funcoonara la API
 - Creador (nombre, nickname, correo, contasena)
 - Categoria (clave, nombre)
 
-## CRUD (Create, Read, Update, Delete).
 
-El funcinamiento de la API sera mediante rutas HTTP, con un verbo/método en especifico.
+---
+# CRUD (Create, Read, Update, Delete).
 
 ### Operaciones de Almacenamiento de datos
 
@@ -93,9 +88,10 @@ Esta es la manera en la cual almacenaremos los datos.
   - texto en el contenido
   - varias categorias
   - filtros en conjuntos espesificos (catefgorias, fecha, nombre, creador)
+---
 
-
-## Estructuras de solicitud y respuesta
+---
+# Estructuras de solicitud y respuesta
 
 ### Registro de nota
 {
@@ -115,9 +111,9 @@ Esta es la manera en la cual almacenaremos los datos.
 }
 
 ## mas ejemplos despues
+---
 
-
-
+---
 ## Rutas de la API
 
 | Path                  | Descripción |
@@ -131,11 +127,9 @@ Esta es la manera en la cual almacenaremos los datos.
 | `/note/create/category` | Se podra crear una nueva categoria |
 | `/note/category/<name>` | Se se mostraran las notas que correspondan a esa categoria |
 | `/note/create/note`     | Se podran crear notas |
-
----
-agregar verbos HTTP
 ---
 
+---
 ## Implementación de rutas para los recursos
 
 ### POST /create/note
@@ -170,45 +164,16 @@ agregar verbos HTTP
 ### GET /info/<key>
 - 200, Datos detallados de la nota espesifica que corresponda a la key escrita
 - D.O.M, regresa mensaje de contenido enextitente (404)
-
-
-
 ---
->
-GET /alumno/<matricula>
-200, datos de alumno con matricula
-D.O.M, regresa mensaje de fallo en formato json
-POST /docente
-201, regitrar un profe, y regresar numero de emplado
-D.O.M, regresa mensaje de fallo
-GET /docente/list
-200, lista de profes en formato json
-D.O.M, regresa mensaje de fallo
-GET /docente/<no_emp>
-200, datos de un profe por numero de empleado
-D.O.M, regresa mensaje de fallo
-POST /materia
-201, registrar una materia y regresa confirmacion de registro
-D.O.M, regresa mensaje de fallo
-POST /materia/<periodo>/<clave>/<matricula>/registrar
-201, Registrar alumno a una materia
-D.O.M, regresa mensaje de fallo
-POST /materia/<periodo>/<clave>/<matricula>/calificar
-201, asignar una calificacion a un alumno
-D.O.M, regresa mensaje de fallo
-Ejemplo para el uso de curl
-Para hacer peticiones HTTP podemos utilizar diversas herramientas, como puede ser POSTMAN, el modulo requests de python o curl mismo.<
----
+
+
 
 curl es un programar que se utiliza en una terminal tipo posix, por lo tanto adoptaremos notacion de archivo de script para un shell posix.
 
-URL_HOST=http://localhost:8080
-ROUTE=/test
-METHOD=POST
-HEADER_1='Content-Type: application/json'
-HEADER_2="Authorization: Bearer ${TOKEN}"
-DATA='{"data":"foo"}'
-# DATA=$(cat /path/to/file)
+
+# Ejemplos de consultas
+---
+## DATA=$(cat /path/to/file)
 
 curl -qv \
     ${URL_HOST}${ROUTE} \
@@ -216,6 +181,31 @@ curl -qv \
     -H "${HEADER_1}" \
     -H "${HEADER_2}" \
     -d "$DATA"
+>Estrutura basica de interaccion<
+
+- Solicitar Titulo de nota y categorias(opcional)
+- Solicitar contenido de la nota(opcional)
+- El identificador se agregara de manera automatica
+
+## ejemplo de creacion de nota
+En este ejemplo se agregara una nota,
+primero se requiere conectar al servidor donde se encuentre corriendo el programa y posteriormente, definir la ruta que se
+utilizara, depues de esto el programa requiere resibir un usuario para poder crear la nota,
+ para esto el programa valida al usuario
+(determina si es posible para el usuario crear la nota o no), despues de eso se solicita la informacion de la nota
+siendo la unica implesindible el nombre de la nota pudiendo ir los otros dos cambos vacios por el momento, y al momento de
+crear la nota se agregara un identificador reconocido como  `KEY`, con esto ya se tendra la nota creada
+
+| URL_HOST=http://localhost:8080
+ROUTE=/note/create
+METHOD=POST
+HEADER_1='Content-Type: application/json'
+HEADER_2="Authorization: Bearer ${TOKEN}"
+DATA='{"name":"nota de ejemplo", "category":"Robots",
+        "content":""
+        }' | 
+
+---
 
 # Usuarios y autentificacion
 >
@@ -227,12 +217,17 @@ curl -qv \
 
 # Archivos Relacionados
 
- - `routes/note-plane.py`
+- `routes/note-plane.py`
+- `routes/auth.py`
+- `routes/storage`
 
-Prefijos de almacenamiento:
+---
+# Almacenamiento
+
+Todas las notas seran en formato JSON y se almacenaran de manera local o en almacenamiento en nube (Almacenamiento deseable).
+>Se recomienda utilizar almacenamiento en nube por el objetivo del Note-plane al ser lo que mas apropiado<
+
+## Prefijos de almacenamiento:
 
  - `note-plane/`
-
-Tablas de Base de Datos
-
-> Pendiente o Nulo
+ ---
