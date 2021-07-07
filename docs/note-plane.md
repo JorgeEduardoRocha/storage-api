@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ### Note-Plane
 
 # Estructura general de proyecto
@@ -457,6 +458,9 @@ prueba
 =======
 # Note-Plane
 >>>>>>> dc9784e (Nuevo doc)
+=======
+### Note-Plane
+>>>>>>> a2bc917 (Update en campos)
 
 # Planeacion de proyectos
 
@@ -484,9 +488,12 @@ al momento de pensar en notas online.
 A continuacion se contestaran algunas preguntas que pueden surgir al respecto de este proyecto.
 
 - ¿Quien es el publico objetivo de este proyecto?
-
+Desde luego este proyecto tiene in publico definido bastante claro, son las personas que realizan sus notas de esta manera, se
+les propone el poder hacerlo de manera distinta y preferentemente mas atrativa.
 
 - ¿Cual es la solucion especifica que plantea este proyecto?
+La falta de centralizacion de notas, el no tener algunas notas en un dispotivo en el cual las ocupas. aunque parece simple puede
+llega a significar un tiempo considerable el estar reuniendolas a largo plazo, se intenta evitar esto.
 
 
 - ¿Que recursos se necesitan para iniciar trabajo sobre este proyecto? (Recurso humano, recurso de computo, infrestructura para el despligue)
@@ -495,7 +502,8 @@ A continuacion se contestaran algunas preguntas que pueden surgir al respecto de
   - Persona con conocimeinto basico en formatos json, http, python y
 
 
-- ¿Que clase de trabajo operativo resultara de culminar este proyecto y desplegar el proyecto?
+- ¿Que se ocupara hacer una ves se implemente el proyecto?
+Solo sera necesario empezar a crear y consultar tus notas en todo momento y lugar.
 
 ---
 
@@ -572,23 +580,49 @@ Esta es la manera en la cual almacenaremos los datos.
 ## Estructuras de solicitud y respuesta
 
 ### Registro de nota
-{
-    "titulo": "nota de ejemplo",
-    "categoria": "",
-    "contenido": "",
-    "fecha de creacion": "xxxx-xx-xx"
-}
+```          {
+              "titulo": "nota de ejemplo",
+              "categoria": "",
+              "contenido": "",
+          }
+```
 
 ### Respuesta de registro de nota exitoso
-{ "id": "XXXX" }
+```          {
+              "code": 201,
+              "message": "Nota creada exitosamente"
+          }
+```
 
 ### Mensaje de fallo
-{
-    "code": 500,
-    "message": "No se pudo crear la nota"
-}
+```          {
+              "code": 500,
+              "message": "No se pudo crear la nota"
+          }
+```
 
-## mas ejemplos despues
+### Registro de Categoria
+          ```{
+              "nombre": "Eletronica",
+              "descripcion": "En esta categoria se hablara de temas telacionadas con eletronica",
+          }
+          ```
+
+### Respuesta de categoria creada exitosamente
+```          {
+              "code": 201,
+              "message": "Categoria creada exitosamente"
+          }
+```
+
+### Respuesta de error al crear categoria
+```          {
+              "code": 500,
+              "message": "No se pudo crear la catefgoria"
+          }
+```
+
+
 ---
 
 ---
@@ -616,10 +650,12 @@ Esta es la manera en la cual almacenaremos los datos.
 - D.O.M, regresa estructura de mensaje de fallo
 
 ### GET /query/<key>
+- Recibe el identificador correspondiente a uno nota
 - 200 regresa la nota que corresponda
 - D.O.M, regresa mensaje de nota no encontrada 404
 
 ### GET /query/<creador>
+- Recibe el nombre del creador
 - 200, regresa la nota que correspondan a ese creador
 - D.O.M, regresa mensaje de creador no encontrado
 
@@ -628,10 +664,12 @@ Esta es la manera en la cual almacenaremos los datos.
 - D.O.M, regresa mensaje de categoria no encontrada
 
 ### GET /query/<name>
+- Recibe el nombre de una nota
 - 200, regresa la nota que correspondan a ese nombre
 - D.O.M, regresa mensaje de fallo en formato json
 
 ### GET /category/<name>
+- Recibe el nombre de alguna categoria existente
 - 200, regresa las notas que correspondan a esa categoria
 - D.O.M, regresa mensaje de fallo general
 
@@ -640,25 +678,23 @@ Esta es la manera en la cual almacenaremos los datos.
 - D.O.M, regresa mensaje de fallo
 
 ### GET /info/<key>
+- Recibe el identificador de una nota
 - 200, Datos detallados de la nota espesifica que corresponda a la key escrita
 - D.O.M, regresa mensaje de contenido enextitente (404)
 ---
 
 
-
-curl es un programar que se utiliza en una terminal tipo posix, por lo tanto adoptaremos notacion de archivo de script para un shell posix.
-
-
 ## Ejemplos de consultas
 ---
 ### DATA=$(cat /path/to/file)
-
-curl -qv \
-    ${URL_HOST}${ROUTE} \
-    -X ${METHOD} \
-    -H "${HEADER_1}" \
-    -H "${HEADER_2}" \
-    -d "$DATA"
+```
+          curl -qv \
+              ${URL_HOST}${ROUTE} \
+              -X ${METHOD} \
+              -H "${HEADER_1}" \
+              -H "${HEADER_2}" \
+              -d "$DATA"
+```
 >Estrutura basica de interaccion
 
 - Solicitar Titulo de nota y categorias(opcional)
@@ -674,7 +710,8 @@ utilizara, depues de esto el programa requiere resibir un usuario para poder cre
 siendo la unica implesindible el nombre de la nota pudiendo ir los otros dos cambos vacios por el momento, y al momento de
 crear la nota se agregara un identificador reconocido como  `KEY`, con esto ya se tendra la nota creada
 
-`
+
+```
 - URL_HOST=http://localhost:8080
 - ROUTE=/note/create
 - METHOD=POST
@@ -683,13 +720,13 @@ crear la nota se agregara un identificador reconocido como  `KEY`, con esto ya s
 - DATA='{"name":"nota de ejemplo", "category":"Robots",
         "content":""
         }'
-`
----
+```
+
 
 ## Usuarios y autentificacion
->
-- (Administrador) Leer todo, editar solo las notas propias: (app: notes:read:all, app: notes:write:self),
-- (Usuario) Leer todo, y editar todo (Usuario): (app: notes:read:all, app: notes:write:all),
+
+- (Administrador) Leer todo, editar solo las notas propias: (app: notes:read:all, app: notes:write:self)
+- (Usuario) Leer todo, y editar todo (Usuario): (app: notes:read:all, app: notes:write:all)
 
 >Solo se tomaran estos usuarios para trabajar
 
@@ -700,11 +737,11 @@ crear la nota se agregara un identificador reconocido como  `KEY`, con esto ya s
 - `routes/auth.py`
 - `routes/storage`
 
----
+
 ## Almacenamiento
 
 Todas las notas seran en formato JSON y se almacenaran de manera local o en almacenamiento en nube (Almacenamiento deseable).
->Se recomienda utilizar almacenamiento en nube por el objetivo del Note-plane al ser lo que mas apropiado<
+>Se recomienda utilizar almacenamiento en nube por el objetivo del Note-plane al ser lo que mas apropiado
 
 ## Prefijos de almacenamiento:
 
@@ -747,5 +784,8 @@ Proyecto basado en repositorio de Alejandro Salgado [ekiim](https://github.com/e
  - `note-plane/`
 
 # Computo en la nube
+<<<<<<< HEAD
  ---
 >>>>>>> 89e0f98 (ejemplos de uso)
+=======
+>>>>>>> a2bc917 (Update en campos)
