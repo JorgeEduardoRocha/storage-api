@@ -458,6 +458,8 @@ prueba
 # Note-Plane
 >>>>>>> dc9784e (Nuevo doc)
 
+# Planeacion de proyectos
+
 ## Introduccion a Note-Plane
 
 La principal funcion de Note-Plane es el poder crear, almacenas y consultar notas en un formato de texto plano de la
@@ -470,7 +472,7 @@ mayor cantidad de dispositivos posibles en todo momento.
 
 
 ---
-# ¿Que es Note-plane?
+## ¿Que es Note-plane?
 
 ### Motivaciones y proposito de Note-plane
 
@@ -490,7 +492,7 @@ A continuacion se contestaran algunas preguntas que pueden surgir al respecto de
 - ¿Que recursos se necesitan para iniciar trabajo sobre este proyecto? (Recurso humano, recurso de computo, infrestructura para el despligue)
   - Dispositivo con conexion a internet
   - ordenador capas de correr codigo de python y un entorno http
-  - Persona con conocimeinto basico en formatos json, http, python y 
+  - Persona con conocimeinto basico en formatos json, http, python y
 
 
 - ¿Que clase de trabajo operativo resultara de culminar este proyecto y desplegar el proyecto?
@@ -498,7 +500,7 @@ A continuacion se contestaran algunas preguntas que pueden surgir al respecto de
 ---
 
 
-# API
+## API
 #### Application Programing Interface
 
 Entidades con las cuales funcoonara la API
@@ -509,7 +511,7 @@ Entidades con las cuales funcoonara la API
 
 
 ---
-# CRUD (Create, Read, Update, Delete).
+## CRUD (Create, Read, Update, Delete).
 
 ### Operaciones de Almacenamiento de datos
 
@@ -537,7 +539,7 @@ Entidades con las cuales funcoonara la API
 Esta es la manera en la cual almacenaremos los datos.
 
 
-## Operaciones de consulta de datos
+#### Operaciones de consulta de datos
 
 - Consultar notas
   - básicos
@@ -567,7 +569,7 @@ Esta es la manera en la cual almacenaremos los datos.
 ---
 
 ---
-# Estructuras de solicitud y respuesta
+## Estructuras de solicitud y respuesta
 
 ### Registro de nota
 {
@@ -647,9 +649,9 @@ Esta es la manera en la cual almacenaremos los datos.
 curl es un programar que se utiliza en una terminal tipo posix, por lo tanto adoptaremos notacion de archivo de script para un shell posix.
 
 
-# Ejemplos de consultas
+## Ejemplos de consultas
 ---
-## DATA=$(cat /path/to/file)
+### DATA=$(cat /path/to/file)
 
 curl -qv \
     ${URL_HOST}${ROUTE} \
@@ -663,7 +665,7 @@ curl -qv \
 - Solicitar contenido de la nota(opcional)
 - El identificador se agregara de manera automatica
 
-## ejemplo de creacion de nota
+### ejemplo de creacion de nota
 En este ejemplo se agregara una nota,
 primero se requiere conectar al servidor donde se encuentre corriendo el programa y posteriormente, definir la ruta que se
 utilizara, depues de esto el programa requiere resibir un usuario para poder crear la nota,
@@ -672,6 +674,7 @@ utilizara, depues de esto el programa requiere resibir un usuario para poder cre
 siendo la unica implesindible el nombre de la nota pudiendo ir los otros dos cambos vacios por el momento, y al momento de
 crear la nota se agregara un identificador reconocido como  `KEY`, con esto ya se tendra la nota creada
 
+`
 - URL_HOST=http://localhost:8080
 - ROUTE=/note/create
 - METHOD=POST
@@ -680,25 +683,25 @@ crear la nota se agregara un identificador reconocido como  `KEY`, con esto ya s
 - DATA='{"name":"nota de ejemplo", "category":"Robots",
         "content":""
         }'
-
+`
 ---
 
-# Usuarios y autentificacion
+## Usuarios y autentificacion
 >
-- Leer todo, editar solo las notas propias: (app: notes:read:all, app: notes:write:self),
-- Leer todo, y editar todo UserA: (app: notes:read:all, app: notes:write:all),
+- (Administrador) Leer todo, editar solo las notas propias: (app: notes:read:all, app: notes:write:self),
+- (Usuario) Leer todo, y editar todo (Usuario): (app: notes:read:all, app: notes:write:all),
 
->Solo se tomaran estas validades para trabajar
+>Solo se tomaran estos usuarios para trabajar
 
 
-# Archivos Relacionados
+## Archivos Relacionados
 
 - `routes/note-plane.py`
 - `routes/auth.py`
 - `routes/storage`
 
 ---
-# Almacenamiento
+## Almacenamiento
 
 Todas las notas seran en formato JSON y se almacenaran de manera local o en almacenamiento en nube (Almacenamiento deseable).
 >Se recomienda utilizar almacenamiento en nube por el objetivo del Note-plane al ser lo que mas apropiado<
@@ -742,5 +745,7 @@ Proyecto basado en repositorio de Alejandro Salgado [ekiim](https://github.com/e
 >>>>>>> dc9784e (Nuevo doc)
 =======
  - `note-plane/`
+
+# Computo en la nube
  ---
 >>>>>>> 89e0f98 (ejemplos de uso)
