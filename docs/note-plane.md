@@ -574,7 +574,6 @@ Esta es la manera en la cual almacenaremos los datos.
   - texto en el contenido
   - varias categorias
   - filtros en conjuntos espesificos (catefgorias, fecha, nombre, creador)
----
 
 ---
 ## Estructuras de solicitud y respuesta
@@ -624,8 +623,6 @@ Esta es la manera en la cual almacenaremos los datos.
 
 
 ---
-
----
 ## Rutas de la API
 
 | Path                  | Descripción |
@@ -639,9 +636,7 @@ Esta es la manera en la cual almacenaremos los datos.
 | `/note/create/category` | Se podra crear una nueva categoria |
 | `/note/category/<name>` | Se se mostraran las notas que correspondan a esa categoria |
 | `/note/create/note`     | Se podran crear notas |
----
 
----
 ## Implementación de rutas para los recursos
 
 ### POST /create/note
