@@ -30,10 +30,13 @@ class EnvModel(pe.Model):
 
 def migrate_database(name):
 <<<<<<< HEAD
+<<<<<<< HEAD
     router = pm.Router(get_database())
     router.create(name)
     router.run()
 =======
+=======
+>>>>>>> 2e7588d (definicion de rutas CELN)
     if name:
         # chdir("./models")
         router = pm.Router(get_database())
@@ -41,4 +44,7 @@ def migrate_database(name):
         router.run(name)
     else:
         print("please provide with a name")
+<<<<<<< HEAD
+>>>>>>> 2e7588d (definicion de rutas CELN)
+=======
 >>>>>>> 2e7588d (definicion de rutas CELN)
