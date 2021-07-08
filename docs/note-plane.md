@@ -399,15 +399,9 @@ Date:   Fri Jun 25 15:21:47 2021 -0700
 # Computo en la nube
 
 
-
-
-Los entregables seran señalamientos a objetos tipo commit de git, en sus correspondientes ramas (del alumno) en
-github.
-
-### Entregable, señalar cual es el commit-hash, apartir del que ustedes realizaron el fork.
+### Fork del proyecto y creacion de MD principal.
 
 - Se realizo el un fork con el programa principal, ademas de que se creo el MD principal del proyecto.
-
 
 | Accion                | Commit Hash|
 | --------------------- | ----------- |
@@ -416,10 +410,27 @@ github.
 
 
 
-### Crear los archivos correspondientes a su proyecto, y someterlos a control de versiones
-- Entregable, señalar el commit-hash que contiene la creación de dichos archivos.
-- Archivos en ./docs, ./routes, ./modules, ./models, nombrados con el slug de su proyecto.
-- NOTA: dentro de docs son archivos tipo markdown (.md), y dentro de las demás son archivos tipo python (.py
+### Creacion de archivos de funcionamiento
+- Archivos agregados en las siguentes rutas
+    - `./docs`
+    - `./routes`
+    - `./modules`
+    - `./models`
+
+##### Definicion de Rutas
+
+###### docs
+se crearon documentos relacionados a la documentacion de proyecto como `note-plane.md`.
+
+###### routes
+Se crearon documentos formato py como `note-plane.py` los cuales contienen el codigo necesario para poder ejecutar las funciones.
+
+###### modules
+Se crearon modulos de codigo en formato py como `note-plane.py` en el cual se definieron funciones para realizar acciones espesificas que requiere el poryecto como, almacenamiento, autentificacion y funcionalidad general de consulta y creacion.
+
+###### models
+Se creron documentos que corresponden a los modelos que tomara el proyecto como el documento `base.py` el cual corresponde a un modelo de almacenamiento en base de datos, se agrego el documento `note-plane-model.py`.
+
 
 | Accion                | Commit Hash|
 | --------------------- | ----------- |
@@ -438,6 +449,7 @@ llaves, code y message, el message debe contener el mensaje, Not Implemented.
 
 ### Crear en su carpeta de modulos funciones que emulen las interacciones con el almacén de archivos o datos, es decir que
 si necesitas una función de consulta, crear una función que retorne una consulta simulada con datos codificados como
+
 constantes, y si necesitas crear objetos funciones que retornen simulando una creación exitosa.
 - Entregable, señalar el commit-hash que contiene la codificacion de estas funciones asistentes.
 - En caso de requerir transacciones contra archivos, estas funciones deben servir como un mediador entre el proyecto
