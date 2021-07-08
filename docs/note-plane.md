@@ -934,12 +934,13 @@ Se crearon documentos formato py como `note-plane.py` los cuales contienen el co
 Se crearon modulos de codigo en formato py como `note-plane.py` en el cual se definieron funciones para realizar acciones espesificas que requiere el poryecto como, almacenamiento, autentificacion y funcionalidad general de consulta y creacion.
 
 ###### models
-Se creron documentos que corresponden a los modelos que tomara el proyecto como el documento `base.py` el cual corresponde a un modelo de almacenamiento en base de datos, se agrego el documento `note-plane-model.py`.
+Se creron documentos que corresponden a los modelos que tomara el proyecto como el documento `base.py` el cual corresponde a un modelo de almacenamiento en base de datos, se agrego el documento `note-plane-models.py`.
 
 
 | Accion                | Commit Hash|
 | --------------------- | ----------- |
-| Trabajo en archvos PY de note-plane v1 |   0e71982dfe4aaf77286f797a81f99c470feed09c |
+| Trabajo en archvos PY de note-plane v1 | 0e71982dfe4aaf77286f797a81f99c470feed09c |
+| definicion de rutas, crear archivos    | 2e7588d6f1a4d87a03f3687552be7896a500bc08 |
 
 
 ### Crear todas las rutas especificadas en su archivo de documentación dentro de su archivo en la carpeta routes, y todas
