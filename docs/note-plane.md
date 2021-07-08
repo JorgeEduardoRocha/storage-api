@@ -284,182 +284,112 @@ Todas las notas seran en formato JSON y se almacenaran de manera local o en alma
 
 ```
 
-commit e1ecc9d85b5d11d03213faaf77e07dd611bee1bc (HEAD -> master, origin/master)
-Author: rocha <rochanunezjorgeeduardo@gmail.com>
-Date:   Wed Jul 7 15:58:57 2021 -0700
-
-    correccion de formato
-
 commit a2bc917d97c0c1afd62384ab8acdaf404ae68fab
 Author: rocha <rochanunezjorgeeduardo@gmail.com>
 Date:   Wed Jul 7 15:54:53 2021 -0700
-
     Update en campos
     introduccion y definicion de proyecto
     formatos de presentaciones generales
 
 
-
-commit 121857dc18e0017c0b83e7531efa329d0a8b65bc
-Author: rocha <rochanunezjorgeeduardo@gmail.com>
-Date:   Tue Jul 6 15:31:59 2021 -0700
-
-    formato
-
 commit 89e0f98de4c11f57a6aa5bc83ec589b87eeb400e
 Author: rocha <rochanunezjorgeeduardo@gmail.com>
 Date:   Tue Jul 6 15:30:44 2021 -0700
-
     ejemplos de uso
 
 commit 7fc4c4dc2bcb0261bc2286fa370b993ea7a893b5
 Author: rocha <rochanunezjorgeeduardo@gmail.com>
 Date:   Tue Jul 6 15:06:54 2021 -0700
-
     update general de varios apartados
 
-commit 5059fcc5b7a3bbf9f66dbb18820b891cc6006a65
-Author: rocha <rochanunezjorgeeduardo@gmail.com>
-Date:   Tue Jul 6 11:40:29 2021 -0700
-
-    descripcion
 
 commit 447f9b44ef05fcc0b473aee164b0d4344cf5a839
 Author: rocha <rochanunezjorgeeduardo@gmail.com>
 Date:   Tue Jul 6 10:18:24 2021 -0700
-
     descripcion general
 
 
 commit 38956fc244442f8ad2ebacc1a1a5a4681295eb11
 Author: rocha <rochanunezjorgeeduardo@gmail.com>
 Date:   Sat Jul 3 12:56:58 2021 -0700
-
     formato tabla
 
-
-commit c6ddc530ef1b4878d216d42f6b6662637b7c5981
-Author: rocha <rochanunezjorgeeduardo@gmail.com>
-Date:   Thu Jul 1 18:42:38 2021 -0700
-
-    correcciones
 
 commit f9c44491c42ff3162d718831623e8661b234a2cc
 Author: rocha <rochanunezjorgeeduardo@gmail.com>
 Date:   Thu Jul 1 18:40:50 2021 -0700
-
     correccion en info
+
 
 commit b7b94a123872619b1e88825d5fefc293e5aa77dc
 Author: rocha <rochanunezjorgeeduardo@gmail.com>
 Date:   Thu Jul 1 18:40:02 2021 -0700
-
     query
 
-commit b975a66dbbb7b9bbaeea05e50e01b7218c047189
-Author: rocha <rochanunezjorgeeduardo@gmail.com>
-Date:   Thu Jul 1 15:57:44 2021 -0700
-
-    plantilla 71%
 
 commit dffefd27125ad075631c6767ca5356a250d9752f
 Author: rocha <rochanunezjorgeeduardo@gmail.com>
 Date:   Thu Jul 1 15:57:23 2021 -0700
-
     plantilla 70%
+
 
 commit ea51b1146539c5335851106ceb13d66fbb012303
 Author: rocha <rochanunezjorgeeduardo@gmail.com>
 Date:   Thu Jul 1 15:09:21 2021 -0700
-
     Cambias mayores en estrutura, sobre todo en acciones
+
 
 commit 17f8de0d0c3b1f5a857afe0110f40bb3569366c1
 Author: rocha <rochanunezjorgeeduardo@gmail.com>
 Date:   Thu Jul 1 14:57:09 2021 -0700
+    crear nota
 
-    prueba de formato
 
 commit 5bff4a7410626408c52ebb7e5ede3fd73f4eb2ff
 Author: rocha <rochanunezjorgeeduardo@gmail.com>
 Date:   Thu Jul 1 14:51:57 2021 -0700
-
     categoria
+
 
 commit 05e4eefe404156653c1a1e0664a1e0ca64382747
 Author: rocha <rochanunezjorgeeduardo@gmail.com>
 Date:   Thu Jul 1 14:49:17 2021 -0700
-
     info de creador
-
-commit 848e35ff6ee2f84afe1584d1cf7ec4e7c8d0e8d8
-Author: rocha <rochanunezjorgeeduardo@gmail.com>
-Date:   Thu Jul 1 14:04:45 2021 -0700
-
-    prueba de formato
 
 
 commit 2b20a16d2e6938a34c5465581374340df2d38da9
 Author: rocha <rochanunezjorgeeduardo@gmail.com>
 Date:   Thu Jul 1 13:59:12 2021 -0700
-
     plantilla para md principal
 
 
 commit 0e71982dfe4aaf77286f797a81f99c470feed09c (Rocha/master)
 Author: unknown <rochanunezjorgeeduardo@gmail.com>
 Date:   Tue Jun 29 15:10:26 2021 -0700
-
     Trabajo en archvos PY de note-plane v1
+
 
 commit 4e5a9d2a07538272f5ac6d4762b424628030905e
 Author: unknown <rochanunezjorgeeduardo@gmail.com>
 Date:   Tue Jun 29 14:48:34 2021 -0700
-
     Trabajo en MD principal v6
-
-
-commit 811509619d9eade3bf6f690296195c21ce7d0f0a
-Author: unknown <rochanunezjorgeeduardo@gmail.com>
-Date:   Tue Jun 29 14:22:29 2021 -0700
-
-    Correccion
 
 
 commit 883ad01ae82d156f842f9049a58b57ca901474c1
 Author: unknown <rochanunezjorgeeduardo@gmail.com>
 Date:   Mon Jun 28 19:19:29 2021 -0700
-
     acerca del poryecto
 
-commit dc9784e2cce711b269520c3d5d77e7bea1c8743c
-Author: unknown <rochanunezjorgeeduardo@gmail.com>
-Date:   Mon Jun 28 19:17:59 2021 -0700
-
-    Nuevo doc
-
-commit a65d0633e74d273d1c2914a31569965e0dc84e57
-Author: unknown <rochanunezjorgeeduardo@gmail.com>
-Date:   Mon Jun 28 10:58:17 2021 -0700
-
-    note-plane md v2, plantilla base
 
 commit 0f255730a2f7a354d780c6e73f7eeaaab843dcdb
 Author: unknown <rochanunezjorgeeduardo@gmail.com>
 Date:   Mon Jun 28 10:56:49 2021 -0700
+    note-plane md, plantilla base
 
-    note-plane md v1, plantilla base
-
-commit c67da9a4aad76ef6d49032dab4aa4a3c482b1784
-Author: unknown <rochanunezjorgeeduardo@gmail.com>
-Date:   Mon Jun 28 10:19:52 2021 -0700
-
-    Update de archivos necesarios
 
 commit 1172e7c09f026f310215722d77fc1a89d058a539
 Author: unknown <rochanunezjorgeeduardo@gmail.com>
 Date:   Fri Jun 25 15:21:47 2021 -0700
-
     add md
 
 
@@ -467,3 +397,68 @@ Date:   Fri Jun 25 15:21:47 2021 -0700
 
 
 # Computo en la nube
+
+
+
+
+Los entregables seran señalamientos a objetos tipo commit de git, en sus correspondientes ramas (del alumno) en
+github.
+
+### Entregable, señalar cual es el commit-hash, apartir del que ustedes realizaron el fork.
+
+- Se realizo el un fork con el programa principal, ademas de que se creo el MD principal del proyecto.
+
+
+| Accion                | Commit Hash|
+| --------------------- | ----------- |
+| Crear fork y agregar md | 1172e7c09f026f310215722d77fc1a89d058a539 |
+| Crear fork y agregar md | c67da9a4aad76ef6d49032dab4aa4a3c482b1784 |
+
+
+
+### Crear los archivos correspondientes a su proyecto, y someterlos a control de versiones
+- Entregable, señalar el commit-hash que contiene la creación de dichos archivos.
+- Archivos en ./docs, ./routes, ./modules, ./models, nombrados con el slug de su proyecto.
+- NOTA: dentro de docs son archivos tipo markdown (.md), y dentro de las demás son archivos tipo python (.py
+
+| Accion                | Commit Hash|
+| --------------------- | ----------- |
+| Trabajo en archvos PY de note-plane v1 |   0e71982dfe4aaf77286f797a81f99c470feed09c |
+
+
+### Crear todas las rutas especificadas en su archivo de documentación dentro de su archivo en la carpeta routes, y todas
+deben de responder 501, con Content-Type: application/json, y un cuerpo de respuesta en formato json con 2
+llaves, code y message, el message debe contener el mensaje, Not Implemented.
+- Entregable, señalar el commit-hash que contiene la codificacion de las rutas
+
+| Accion                | Commit Hash|
+| --------------------- | ----------- |
+|  Crear fork y agregar md |   1172e7c09f026f310215722d77fc1a89d058a539 |
+
+
+### Crear en su carpeta de modulos funciones que emulen las interacciones con el almacén de archivos o datos, es decir que
+si necesitas una función de consulta, crear una función que retorne una consulta simulada con datos codificados como
+constantes, y si necesitas crear objetos funciones que retornen simulando una creación exitosa.
+- Entregable, señalar el commit-hash que contiene la codificacion de estas funciones asistentes.
+- En caso de requerir transacciones contra archivos, estas funciones deben servir como un mediador entre el proyecto
+de servidor http, y el almacen de archivos
+- En caso de requerir transacciones contra una base de datos, estas funciones deben servir como un mediador entre
+el proyecto de servidor http, y la base de datos
+
+| Accion                | Commit Hash|
+| --------------------- | ----------- |
+|  Crear fork y agregar md |   1172e7c09f026f310215722d77fc1a89d058a539 |
+
+
+
+### Crear mock ups, de las vistas que desean implementar, utilizando MoqUps (conectar a su google drive).
+- Una vez concluidas las propuestas de vistas exportar a imagen, e incluir en el documento una explicacion de los
+datos expresados en las vistas emparejandolos con que endpoints contienen dicha informacion o a cual endpoint de
+su proyecto, estos activan.
+- Entregable, señalar el commit-hash que contiene la inclusión de estas descripciones al documento, junto con los
+commits que contienen las imagenes.
+- Las imagenes deberan ser nombradas como ./docs/assets/<slug>-<no-4-digitos>-<description>.png
+
+| Accion                | Commit Hash|
+| --------------------- | ----------- |
+|  Crear fork y agregar md |   1172e7c09f026f310215722d77fc1a89d058a539 |
