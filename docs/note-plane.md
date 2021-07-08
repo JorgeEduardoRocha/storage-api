@@ -850,12 +850,6 @@ Date:   Tue Jun 29 15:10:26 2021 -0700
     Trabajo en archvos PY de note-plane v1
 
 
-commit 883ad01ae82d156f842f9049a58b57ca901474c1
-Author: unknown <rochanunezjorgeeduardo@gmail.com>
-Date:   Mon Jun 28 19:19:29 2021 -0700
-    acerca del poryecto
-
-
 commit 1172e7c09f026f310215722d77fc1a89d058a539
 Author: unknown <rochanunezjorgeeduardo@gmail.com>
 Date:   Fri Jun 25 15:21:47 2021 -0700
@@ -952,7 +946,8 @@ que se desea obtener
 - EN `note-plane-0001-Crear nota` se muestra la interfaz para crear una nota asi como los elementos solicitados.
 - En `note-plane-0002-Crear categoria` se muestra la interfaz para crear una categoria asi como los elementos solicitados.
 - En `note-plane-0003-Vizualizar nota seleccionada` Se muestra una nota de forma espesifica tanto para consultarla como para comenzar a trabajar en ella.
-| Accion                | Commit Hash|
+  
+| Accion                | Commit Hash |
 | --------------------- | ----------- |
 <<<<<<< HEAD
 <<<<<<< HEAD
