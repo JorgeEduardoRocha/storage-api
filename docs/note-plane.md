@@ -441,14 +441,12 @@ que se desea obtener
 ---
 
 
-### Crear mock ups, de las vistas que desean implementar, utilizando MoqUps (conectar a su google drive).
-- Una vez concluidas las propuestas de vistas exportar a imagen, e incluir en el documento una explicacion de los
-datos expresados en las vistas emparejandolos con que endpoints contienen dicha informacion o a cual endpoint de
-su proyecto, estos activan.
-- Entregable, señalar el commit-hash que contiene la inclusión de estas descripciones al documento, junto con los
-commits que contienen las imagenes.
-- Las imagenes deberan ser nombradas como ./docs/assets/<slug>-<no-4-digitos>-<description>.png
-
+### Esquemas de interfaz web del proyecto
+  
+- En `note-plane-0000-Dashboard principal` se muestra el dashboard principal de la interfaz web.
+- EN `note-plane-0001-Crear nota` se muestra la interfaz para crear una nota asi como los elementos solicitados.
+- En `note-plane-0002-Crear categoria` se muestra la interfaz para crear una categoria asi como los elementos solicitados.
+- En `note-plane-0003-Vizualizar nota seleccionada` Se muestra una nota de forma espesifica tanto para consultarla como para comenzar a trabajar en ella.
 | Accion                | Commit Hash|
 | --------------------- | ----------- |
-|  Creacion de MoqUps y definicion |  |
+|  Creacion de MoqUps y definicion | 4fdef40976e90f67f806028e9f551d726b5d4df0 |
