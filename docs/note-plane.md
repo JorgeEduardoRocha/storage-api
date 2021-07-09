@@ -442,7 +442,7 @@ que se desea obtener
 - En `note-plane-0002-Crear categoria` se muestra la interfaz para crear una categoria asi como los elementos solicitados.
 - En `note-plane-0003-Vizualizar nota seleccionada` Se muestra una nota de forma espesifica tanto para consultarla como para comenzar a trabajar en ella.
   
-<img src="docs/assets/note-plane-0000-Dashboard principal.png" width="250">  
+<img src="https://github.com/JorgeEduardoRocha/storage-api/blob/1b97f54621cf5048f35a5b99e95b3b7a7d7ecab4/docs/assets/note-plane-0000-Dashboard%20principal.png" width="250">  
   
 | Accion                | Commit Hash |
 | --------------------- | ----------- |
