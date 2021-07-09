@@ -920,7 +920,7 @@ Se creron documentos que corresponden a los modelos que tomara el proyecto como 
 
 | Accion                | Commit Hash|
 | --------------------- | ----------- |
-| Respuesta de creacion | 1172e7c09f026f310215722d77fc1a89d058a539 |
+| Respuesta de creacion |  |
 
 ---
 
@@ -936,23 +936,34 @@ que se desea obtener
 
 | Accion                | Commit Hash|
 | --------------------- | ----------- |
-|  Codificacion de funciones |   1172e7c09f026f310215722d77fc1a89d058a539 |
+|  Codificacion de funciones | f5080c2015adc53ed0e53d9454592cc1489c2089 |
 ---
 
 
 ### Esquemas de interfaz web del proyecto
 
 - En `note-plane-0000-Dashboard principal` se muestra el dashboard principal de la interfaz web.
+
 <img src="https://github.com/JorgeEduardoRocha/storage-api/blob/1b97f54621cf5048f35a5b99e95b3b7a7d7ecab4/docs/assets/note-plane-0000-Dashboard%20principal.png" width="550">  
 
+
+
 - EN `note-plane-0001-Crear nota` se muestra la interfaz para crear una nota asi como los elementos solicitados.
+
 <img src="https://github.com/JorgeEduardoRocha/storage-api/blob/24a356148b0e4a677cb8e9a92eb821321529393e/docs/assets/note-plane-0001-Crear%20nota.png" width="550">  
 
+
+
 - En `note-plane-0002-Crear categoria` se muestra la interfaz para crear una categoria asi como los elementos solicitados.
+
 <img src="https://github.com/JorgeEduardoRocha/storage-api/blob/24a356148b0e4a677cb8e9a92eb821321529393e/docs/assets/note-plane-0002-Crear%20categoria.png" width="550">  
 
+
+
 - En `note-plane-0003-Vizualizar nota seleccionada` Se muestra una nota de forma espesifica tanto para consultarla como para comenzar a trabajar en ella.
+
 <img src="https://github.com/JorgeEduardoRocha/storage-api/blob/24a356148b0e4a677cb8e9a92eb821321529393e/docs/assets/note-plane-0003-Vizualizar%20nota%20seleccionada.png" width="550">  
+
 
 
 | Accion                | Commit Hash |
