@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 ### Note-Plane
 
+<<<<<<< HEAD
 # Estructura general de proyecto
 ## Introduccion a Note-Plane
 
@@ -464,6 +465,9 @@ prueba
 
 # Planeacion de proyectos
 
+=======
+# Estrutura general de proyecto
+>>>>>>> 8c819e0 (Update note-plane.md)
 ## Introduccion a Note-Plane
 
 La principal funcion de Note-Plane es el poder crear, almacenas y consultar notas en un formato de texto plano de la
@@ -579,50 +583,49 @@ Esta es la manera en la cual almacenaremos los datos.
 ## Estructuras de solicitud y respuesta
 
 ### Registro de nota
-```          {
-              "titulo": "nota de ejemplo",
-              "categoria": "",
-              "contenido": "",
-          }
+```         
+{
+ "titulo": "nota de ejemplo", "categoria": "", "contenido": "",
+}
 ```
 
 ### Respuesta de registro de nota exitoso
-```          {
-              "code": 201,
-              "message": "Nota creada exitosamente"
-          }
+```         
+{
+"code": 201, "message": "Nota creada exitosamente"
+}
 ```
 
 ### Mensaje de fallo
-```          {
-              "code": 500,
-              "message": "No se pudo crear la nota"
-          }
+```          
+{
+"code": 500, "message": "No se pudo crear la nota"
+}
 ```
 
 ### Registro de Categoria
-          ```{
-              "nombre": "Eletronica",
-              "descripcion": "En esta categoria se hablara de temas telacionadas con eletronica",
-          }
-          ```
+```
+{
+"nombre": "Eletronica", "descripcion": "En esta categoria se hablara de temas telacionadas con eletronica",
+}
+```
 
 ### Respuesta de categoria creada exitosamente
-```          {
-              "code": 201,
-              "message": "Categoria creada exitosamente"
-          }
+```          
+{
+"code": 201, "message": "Categoria creada exitosamente"
+}
 ```
 
 ### Respuesta de error al crear categoria
-```          {
-              "code": 500,
-              "message": "No se pudo crear la catefgoria"
-          }
+```
+{
+"code": 500, "message": "No se pudo crear la catefgoria"
+}
 ```
 
-
 ---
+
 ## Rutas de la API
 
 | Path                  | Descripción |
@@ -683,12 +686,12 @@ Esta es la manera en la cual almacenaremos los datos.
 ---
 ### DATA=$(cat /path/to/file)
 ```
-          curl -qv \
-              ${URL_HOST}${ROUTE} \
-              -X ${METHOD} \
-              -H "${HEADER_1}" \
-              -H "${HEADER_2}" \
-              -d "$DATA"
+curl -qv \
+  ${URL_HOST}${ROUTE} \
+  -X ${METHOD} \
+  -H "${HEADER_1}" \
+  -H "${HEADER_2}" \
+  -d "$DATA"
 ```
 >Estrutura basica de interaccion
 
@@ -707,14 +710,12 @@ crear la nota se agregara un identificador reconocido como  `KEY`, con esto ya s
 
 
 ```
-- URL_HOST=http://localhost:8080
-- ROUTE=/note/create
-- METHOD=POST
-- HEADER_1='Content-Type: application/json'
-- HEADER_2="Authorization: Bearer ${TOKEN}"
-- DATA='{"name":"nota de ejemplo", "category":"Robots",
-        "content":""
-        }'
+URL_HOST=http://localhost:8080 \
+ROUTE=/note/create \
+METHOD=POST \
+HEADER_1='Content-Type: application/json' \
+HEADER_2="Authorization: Bearer ${TOKEN}" \
+DATA='{"name":"nota de ejemplo", "category":"Robots", "content":""}' \
 ```
 
 
@@ -740,6 +741,7 @@ Todas las notas seran en formato JSON y se almacenaran de manera local o en alma
 
 ## Prefijos de almacenamiento:
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ## Construido con 🛠️
@@ -777,88 +779,54 @@ Proyecto basado en repositorio de Alejandro Salgado [ekiim](https://github.com/e
 >>>>>>> dc9784e (Nuevo doc)
 =======
  - `note-plane/`
+=======
+- `note-plane/`
+>>>>>>> 8c819e0 (Update note-plane.md)
 
 ## Historial de git
 
 ```
 
 commit a2bc917d97c0c1afd62384ab8acdaf404ae68fab
-Author: rocha <rochanunezjorgeeduardo@gmail.com>
-Date:   Wed Jul 7 15:54:53 2021 -0700
     Update en campos
     introduccion y definicion de proyecto
     formatos de presentaciones generales
 
 
 commit 89e0f98de4c11f57a6aa5bc83ec589b87eeb400e
-Author: rocha <rochanunezjorgeeduardo@gmail.com>
-Date:   Tue Jul 6 15:30:44 2021 -0700
     ejemplos de uso
 
 
 commit 447f9b44ef05fcc0b473aee164b0d4344cf5a839
-Author: rocha <rochanunezjorgeeduardo@gmail.com>
-Date:   Tue Jul 6 10:18:24 2021 -0700
     descripcion general
 
 
 commit 38956fc244442f8ad2ebacc1a1a5a4681295eb11
-Author: rocha <rochanunezjorgeeduardo@gmail.com>
-Date:   Sat Jul 3 12:56:58 2021 -0700
     formato tabla
 
 
-commit f9c44491c42ff3162d718831623e8661b234a2cc
-Author: rocha <rochanunezjorgeeduardo@gmail.com>
-Date:   Thu Jul 1 18:40:50 2021 -0700
-    correccion en info
-
-
 commit b7b94a123872619b1e88825d5fefc293e5aa77dc
-Author: rocha <rochanunezjorgeeduardo@gmail.com>
-Date:   Thu Jul 1 18:40:02 2021 -0700
-    query
+    querys
 
-
-commit ea51b1146539c5335851106ceb13d66fbb012303
-Author: rocha <rochanunezjorgeeduardo@gmail.com>
-Date:   Thu Jul 1 15:09:21 2021 -0700
-    Cambias mayores en estrutura, sobre todo en acciones
-
-
+  
 commit 17f8de0d0c3b1f5a857afe0110f40bb3569366c1
 Author: rocha <rochanunezjorgeeduardo@gmail.com>
 Date:   Thu Jul 1 14:57:09 2021 -0700
     crear nota
-
-
-commit 5bff4a7410626408c52ebb7e5ede3fd73f4eb2ff
-Author: rocha <rochanunezjorgeeduardo@gmail.com>
-Date:   Thu Jul 1 14:51:57 2021 -0700
-    categoria
-
-
-commit 05e4eefe404156653c1a1e0664a1e0ca64382747
-Author: rocha <rochanunezjorgeeduardo@gmail.com>
-Date:   Thu Jul 1 14:49:17 2021 -0700
-    info de creador
-
+  
 
 commit 0e71982dfe4aaf77286f797a81f99c470feed09c (Rocha/master)
-Author: unknown <rochanunezjorgeeduardo@gmail.com>
-Date:   Tue Jun 29 15:10:26 2021 -0700
     Trabajo en archvos PY de note-plane v1
 
 
 commit 1172e7c09f026f310215722d77fc1a89d058a539
-Author: unknown <rochanunezjorgeeduardo@gmail.com>
-Date:   Fri Jun 25 15:21:47 2021 -0700
     add md
 
 
 ```
 
 
+<<<<<<< HEAD
 # Computo en la nube
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -867,6 +835,9 @@ Date:   Fri Jun 25 15:21:47 2021 -0700
 =======
 >>>>>>> a2bc917 (Update en campos)
 =======
+=======
+# Documento tecnico de funcionamiento general
+>>>>>>> 8c819e0 (Update note-plane.md)
 
 
 ### Fork del proyecto y creacion de MD principal.
