@@ -6,9 +6,12 @@ service.
 
 """
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import sys
 import datetime
+=======
+>>>>>>> ca8357a (Se crearon rutas espesificas)
 =======
 >>>>>>> ca8357a (Se crearon rutas espesificas)
 import bottle

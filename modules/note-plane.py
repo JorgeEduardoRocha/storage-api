@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ca8357a (Se crearon rutas espesificas)
 from os import environ
 from mimetypes import guess_type
 from pathlib import Path
@@ -56,6 +59,9 @@ def get_storage_file(path=""):
         raise Exception("Does not exists")
     mime = (guess_type(str(target)) or ["application/octet-stream"])[0]
     return mime, target.read_bytes()
+<<<<<<< HEAD
 =======
 no se que va aqui saludos
 >>>>>>> 0e71982 (Trabajo en archvos PY de note-plane v1)
+=======
+>>>>>>> ca8357a (Se crearon rutas espesificas)
