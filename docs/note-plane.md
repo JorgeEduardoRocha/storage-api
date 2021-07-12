@@ -1,6 +1,6 @@
 ### Note-Plane
 
-# Estrutura general de proyecto
+# Estructura general de proyecto
 ## Introduccion a Note-Plane
 
 La principal funcion de Note-Plane es el poder crear, almacenas y consultar notas en un formato de texto plano de la
@@ -396,18 +396,23 @@ que se desea obtener
 ### Esquemas de interfaz web del proyecto
 
 - En `note-plane-0000-Dashboard principal` se muestra el dashboard principal de la interfaz web.
+  - boton buscar: se mostrara una barra de busqueds y despues solo las notas que coicidan
+  - boton de eliminar: se Mostra uns ventana emergente para confirmar sl eliminar el elemento
+  - boton editar: se direccionara a la ventana de lectura y edición general de notas `note-plane-0003-Vizualizar nota seleccionada`
 
 <img src="https://github.com/JorgeEduardoRocha/storage-api/blob/1b97f54621cf5048f35a5b99e95b3b7a7d7ecab4/docs/assets/note-plane-0000-Dashboard%20principal.png" width="550">  
 
 
 
 - EN `note-plane-0001-Crear nota` se muestra la interfaz para crear una nota asi como los elementos solicitados.
+  - se solicitan datos generales para generar una nota (solo el nombre es obligatorio al momento de crear una nota)
 
 <img src="https://github.com/JorgeEduardoRocha/storage-api/blob/24a356148b0e4a677cb8e9a92eb821321529393e/docs/assets/note-plane-0001-Crear%20nota.png" width="550">  
 
 
 
 - En `note-plane-0002-Crear categoria` se muestra la interfaz para crear una categoria asi como los elementos solicitados.
+  - se solicitan datos generales para crear una nota (solo el nombre es obligatorio al momento de crear una nota)
 
 <img src="https://github.com/JorgeEduardoRocha/storage-api/blob/24a356148b0e4a677cb8e9a92eb821321529393e/docs/assets/note-plane-0002-Crear%20categoria.png" width="550">  
 
@@ -415,6 +420,8 @@ que se desea obtener
 
 ---  
 - En `note-plane-0003-Vizualizar nota seleccionada` Se muestra una nota de forma espesifica tanto para consultarla como para comenzar a trabajar en ella.
+  - en esta sección se pueden leer las notas generadas, además de poder dirar todos los campos de la nota.
+
 <img src="https://github.com/JorgeEduardoRocha/storage-api/blob/24a356148b0e4a677cb8e9a92eb821321529393e/docs/assets/note-plane-0003-Vizualizar%20nota%20seleccionada.png" width="550" >  
 
 
