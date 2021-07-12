@@ -20,6 +20,7 @@ mayor cantidad de dispositivos posibles en todo momento.
 
 
 
+<<<<<<< HEAD
 ---
 
 ## ¿Que es Note-plane?
@@ -483,7 +484,10 @@ consultar y almacenar notas en formato de texto plano y sobre todo tener la posi
 mayor cantidad de dispositivos posibles en todo momento.
 
 
+=======
+>>>>>>> eca1a3e (orden de informacion)
 ---
+
 ## ¿Que es Note-plane?
 
 ### Motivaciones y proposito de Note-plane
@@ -513,6 +517,7 @@ llega a significar un tiempo considerable el estar reuniendolas a largo plazo, s
 - ¿Que se ocupara hacer una ves se implemente el proyecto?
 Solo sera necesario empezar a crear y consultar tus notas en todo momento y lugar.
 
+
 ---
 
 
@@ -526,7 +531,7 @@ Entidades con las cuales funcoonara la API
 - Categoria (clave, nombre)
 
 
----
+
 ## CRUD (Create, Read, Update, Delete).
 
 ### Operaciones de Almacenamiento de datos
@@ -583,7 +588,11 @@ Esta es la manera en la cual almacenaremos los datos.
   - varias categorias
   - filtros en conjuntos espesificos (catefgorias, fecha, nombre, creador)
 
+
 ---
+
+
+
 ## Estructuras de solicitud y respuesta
 
 ### Registro de nota
@@ -629,6 +638,8 @@ Esta es la manera en la cual almacenaremos los datos.
 ```
 
 ---
+
+
 
 ## Rutas de la API
 
@@ -683,11 +694,13 @@ Esta es la manera en la cual almacenaremos los datos.
 - Recibe el identificador de una nota
 - 200, Datos detallados de la nota espesifica que corresponda a la key escrita
 - D.O.M, regresa mensaje de contenido enextitente (404)
+
 ---
+
 
 
 ## Ejemplos de consultas
----
+
 ### DATA=$(cat /path/to/file)
 ```
 curl -qv \
