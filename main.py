@@ -5,7 +5,6 @@ bottle.py and intended to be used as a Google Cloud Run
 service.
 
 """
-
 import bottle
 import routes.auth
 import routes.storage
