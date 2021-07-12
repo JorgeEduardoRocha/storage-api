@@ -812,12 +812,12 @@ commit 38956fc244442f8ad2ebacc1a1a5a4681295eb11
 commit b7b94a123872619b1e88825d5fefc293e5aa77dc
     querys
 
-  
+
 commit 17f8de0d0c3b1f5a857afe0110f40bb3569366c1
 Author: rocha <rochanunezjorgeeduardo@gmail.com>
 Date:   Thu Jul 1 14:57:09 2021 -0700
     crear nota
-  
+
 
 commit 0e71982dfe4aaf77286f797a81f99c470feed09c (Rocha/master)
     Trabajo en archvos PY de note-plane v1
@@ -888,21 +888,23 @@ Se creron documentos que corresponden a los modelos que tomara el proyecto como 
 
 
 ### Creacion de rutas espesificas
+>Seccion en desarrollo
 
 - Se crearon rutas las cuales tienen que responder 501, con Content-Type: application/json, y un cuerpo de respuesta en formato json con 2 llaves, code y message, el message, Not Implemented.
 
-- Entregable, señalar el commit-hash que contiene la codificacion de las rutas.
+- Rutas creadas, falta implementacion de codigo completo  
 
 | Accion                | Commit Hash|
 | --------------------- | ----------- |
-| Respuesta de creacion |  |
+| Respuesta de creacion | ca8357af36ef4b3ed72de88b6e8111a09153271f  |
 
 ---
 
 
 ### Funcionamiento de almacenamiento de archivos
-Se mostraran ejemplo de funciones simuladas con resulados preestablecidos, con el proposito de crear una base al funcionamieno real
-que se desea obtener
+>Seccion en desarrollo
+
+Se mostrara uan simulacion del funcionamiento esperado del proyecto con el proposito de poder visualizar como es que se comportara el poryecto una vez conlcuido, y para observar detalladamente el funcionamiento del almacenamiento de archivos
 
 - se generaron simulaciones de las acciones del proyecto
 
