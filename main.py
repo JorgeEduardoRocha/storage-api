@@ -5,9 +5,12 @@ bottle.py and intended to be used as a Google Cloud Run
 service.
 
 """
+<<<<<<< HEAD
 
 import sys
 import datetime
+=======
+>>>>>>> ca8357a (Se crearon rutas espesificas)
 import bottle
 import routes.auth
 import routes.storage
