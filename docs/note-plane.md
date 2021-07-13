@@ -101,9 +101,7 @@ Esta es la manera en la cual almacenaremos los datos.
 
 - Consultar creadores  
   - basico
-  - identificador
   - nombre
-  - username
 
 - Consultar categoria
   - basico
@@ -128,7 +126,7 @@ Esta es la manera en la cual almacenaremos los datos.
 ### Registro de nota
 ```         
 {
- "titulo": "nota de ejemplo", "categoria": "", "contenido": "",
+ "titulo": "nota de ejemplo", "categoria": "", "contenido": ""
 }
 ```
 
@@ -317,12 +315,10 @@ commit b7b94a123872619b1e88825d5fefc293e5aa77dc
 
 
 commit 17f8de0d0c3b1f5a857afe0110f40bb3569366c1
-Author: rocha <rochanunezjorgeeduardo@gmail.com>
-Date:   Thu Jul 1 14:57:09 2021 -0700
     crear nota
 
 
-commit 0e71982dfe4aaf77286f797a81f99c470feed09c (Rocha/master)
+commit 0e71982dfe4aaf77286f797a81f99c470feed09c 
     Trabajo en archvos PY de note-plane v1
 
 
