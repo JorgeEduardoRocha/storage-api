@@ -54,8 +54,8 @@ Solo sera necesario empezar a crear y consultar tus notas en todo momento y luga
 Entidades con las cuales funcoonara la API
 
 - Nota (clave, titulo, fecha, informacion de creacion, contenido)
-- Creador (nombre, nickname, correo, contasena)
-- Categoria (clave, nombre)
+- Creador (nombre, credenciales)
+- Categoria (clave, nombre, descripcion)
 
 
 
@@ -65,6 +65,7 @@ Entidades con las cuales funcoonara la API
 
 
 #### Operaciones de Notas
+
 ###### Cear una nota
   - Solicitar Titulo de nota y categorias(opcional)
   - Solicitar contenido de la nota(opcional)
@@ -77,11 +78,13 @@ Entidades con las cuales funcoonara la API
 
 #### Operaciones de catefgorias
 ###### Registrar a una categoria
-- Solicitamos nombre, descripcion.
+  - Solicitamos nombre, descripcion.
+  - Solicitar contenido de la nota(opcional)
+  - El identificador se agregara de manera automatica
 ###### Eliminar una categoria
-- Eliminar una categoria
+  - Eliminar una categoria
 ###### Editar una categoria
-- Cambiar informacion de una categoria
+  - Cambiar informacion de una categoria
 
 
 Esta es la manera en la cual almacenaremos los datos.
@@ -146,7 +149,7 @@ Esta es la manera en la cual almacenaremos los datos.
 ### Registro de Categoria
 ```
 {
-"nombre": "Eletronica", "descripcion": "En esta categoria se hablara de temas telacionadas con eletronica",
+"nombre": "Eletronica", "descripcion": "En esta categoria se hablara de temas telacionadas con eletronica"
 }
 ```
 
