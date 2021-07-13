@@ -30,6 +30,7 @@ app = bottle.Bottle()
 def store_record(*args, **kwargs):
     #aqui codigo
     return dict(code=501, message="not implemented)
+<<<<<<< HEAD
 
 @app.get("/query/<key>")
 def store_record(*args, **kwargs):
@@ -69,24 +70,23 @@ def store_record(*args, **kwargs):
     #aqui codigo
     return dict(code=501,{"code" :"501", "messaje" : "Not implement"})
 
+=======
+>>>>>>> 80da826 (Update note-plane.py)
 
 @app.get("/query/<key>")
 def store_record(*args, **kwargs):
     #aqui codigo
-    return dict(code=501,{"code" :"501", "messaje" : "Not implement"})
-
-
+    return dict(code=501, message="not implemented)
 
 @app.get("/creator")
 def store_record(*args, **kwargs):
     #aqui codigo
-    return dict(code=501,{"code" :"501", "messaje" : "Not implement"})
-
-
+    return dict(code=501, message="not implemented)
 
 @app.get("/info/<name>")
 def store_record(*args, **kwargs):
     #aqui codigo
+<<<<<<< HEAD
     return dict(code=501,{"code" :"501", "messaje" : "Not implement"})
 
 
@@ -96,21 +96,26 @@ def void_report(*args, **kwargs):
     return dict(code=200)
 >>>>>>> 0e71982 (Trabajo en archvos PY de note-plane v1)
 =======
+=======
+    return dict(code=501, message="not implemented)
+>>>>>>> 80da826 (Update note-plane.py)
 
 @app.get("/create/category")
 def store_record(*args, **kwargs):
     #aqui codigo
-    return dict(code=501,{"code" :"501", "messaje" : "Not implement"})
-
+    return dict(code=501, message="not implemented)
 
 @app.get("/category/<name>")
 def store_record(*args, **kwargs):
     #aqui codigo
-    return dict(code=501,{"code" :"501", "messaje" : "Not implement"})
-
+    return dict(code=501, message="not implemented)
 
 @app.get("/create/note")
 def store_record(*args, **kwargs):
     #aqui codigo
+<<<<<<< HEAD
     return dict(code=501,{"code" :"501", "messaje" : "Not implement"})
 >>>>>>> ca8357a (Se crearon rutas espesificas)
+=======
+    return dict(code=501, message="not implemented)
+>>>>>>> 80da826 (Update note-plane.py)
