@@ -3,4 +3,11 @@
 .gitignore
 .git
 gcloud_key.json
-storage/
+.cache/
+.storage/
+__pycache__/
+*.py[cod]
+*$py.class
+database.db
+logs/
+migrations/
