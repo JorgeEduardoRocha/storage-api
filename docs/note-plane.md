@@ -54,8 +54,8 @@ Solo sera necesario empezar a crear y consultar tus notas en todo momento y luga
 Entidades con las cuales funcoonara la API
 
 - Nota (clave, titulo, fecha, informacion de creacion, contenido)
-- Creador (nombre, nickname, correo, contasena)
-- Categoria (clave, nombre)
+- Creador (nombre, credenciales)
+- Categoria (clave, nombre, descripcion)
 
 
 
@@ -65,6 +65,7 @@ Entidades con las cuales funcoonara la API
 
 
 #### Operaciones de Notas
+
 ###### Cear una nota
   - Solicitar Titulo de nota y categorias(opcional)
   - Solicitar contenido de la nota(opcional)
@@ -77,11 +78,13 @@ Entidades con las cuales funcoonara la API
 
 #### Operaciones de catefgorias
 ###### Registrar a una categoria
-- Solicitamos nombre, descripcion.
+  - Solicitamos nombre, descripcion.
+  - Solicitar contenido de la nota(opcional)
+  - El identificador se agregara de manera automatica
 ###### Eliminar una categoria
-- Eliminar una categoria
+  - Eliminar una categoria
 ###### Editar una categoria
-- Cambiar informacion de una categoria
+  - Cambiar informacion de una categoria
 
 
 Esta es la manera en la cual almacenaremos los datos.
@@ -98,9 +101,7 @@ Esta es la manera en la cual almacenaremos los datos.
 
 - Consultar creadores  
   - basico
-  - identificador
   - nombre
-  - username
 
 - Consultar categoria
   - basico
@@ -125,7 +126,7 @@ Esta es la manera en la cual almacenaremos los datos.
 ### Registro de nota
 ```         
 {
- "titulo": "nota de ejemplo", "categoria": "", "contenido": "",
+ "titulo": "nota de ejemplo", "categoria": "", "contenido": ""
 }
 ```
 
@@ -146,7 +147,7 @@ Esta es la manera en la cual almacenaremos los datos.
 ### Registro de Categoria
 ```
 {
-"nombre": "Eletronica", "descripcion": "En esta categoria se hablara de temas telacionadas con eletronica",
+"nombre": "Eletronica", "descripcion": "En esta categoria se hablara de temas telacionadas con eletronica"
 }
 ```
 
@@ -314,12 +315,10 @@ commit b7b94a123872619b1e88825d5fefc293e5aa77dc
 
 
 commit 17f8de0d0c3b1f5a857afe0110f40bb3569366c1
-Author: rocha <rochanunezjorgeeduardo@gmail.com>
-Date:   Thu Jul 1 14:57:09 2021 -0700
     crear nota
 
 
-commit 0e71982dfe4aaf77286f797a81f99c470feed09c (Rocha/master)
+commit 0e71982dfe4aaf77286f797a81f99c470feed09c 
     Trabajo en archvos PY de note-plane v1
 
 

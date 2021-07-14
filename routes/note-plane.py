@@ -27,43 +27,34 @@ app = bottle.Bottle()
 @app.get("/query")
 def store_record(*args, **kwargs):
     #aqui codigo
-    return dict(code=501,{"code" :"501", "messaje" : "Not implement"})
-
+    return dict(code=501, message="not implemented)
 
 @app.get("/query/<key>")
 def store_record(*args, **kwargs):
     #aqui codigo
-    return dict(code=501,{"code" :"501", "messaje" : "Not implement"})
-
-
+    return dict(code=501, message="not implemented)
 
 @app.get("/creator")
 def store_record(*args, **kwargs):
     #aqui codigo
-    return dict(code=501,{"code" :"501", "messaje" : "Not implement"})
-
-
+    return dict(code=501, message="not implemented)
 
 @app.get("/info/<name>")
 def store_record(*args, **kwargs):
     #aqui codigo
-    return dict(code=501,{"code" :"501", "messaje" : "Not implement"})
-
-
+    return dict(code=501, message="not implemented)
 
 @app.get("/create/category")
 def store_record(*args, **kwargs):
     #aqui codigo
-    return dict(code=501,{"code" :"501", "messaje" : "Not implement"})
-
+    return dict(code=501, message="not implemented)
 
 @app.get("/category/<name>")
 def store_record(*args, **kwargs):
     #aqui codigo
-    return dict(code=501,{"code" :"501", "messaje" : "Not implement"})
-
+    return dict(code=501, message="not implemented)
 
 @app.get("/create/note")
 def store_record(*args, **kwargs):
     #aqui codigo
-    return dict(code=501,{"code" :"501", "messaje" : "Not implement"})
+    return dict(code=501, message="not implemented)
