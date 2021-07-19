@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ### Note-Plane
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 # Estructura general de proyecto
 ## Introduccion a Note-Plane
 
@@ -18,9 +11,6 @@ El enfoque de este proyecto es un nicho de personas que quieren una manera simpl
 consultar y almacenar notas en formato de texto plano y sobre todo tener la posibilidad de poder acceder a ellas desde
 mayor cantidad de dispositivos posibles en todo momento.
 
-
-
-<<<<<<< HEAD
 ---
 
 ## ¿Que es Note-plane?
@@ -330,6 +320,7 @@ commit 17f8de0d0c3b1f5a857afe0110f40bb3569366c1
     crear nota
 
 
+<<<<<<< HEAD
 commit 0e71982dfe4aaf77286f797a81f99c470feed09c 
     Trabajo en archvos PY de note-plane v1
 
@@ -840,6 +831,9 @@ commit 17f8de0d0c3b1f5a857afe0110f40bb3569366c1
 
 
 commit 0e71982dfe4aaf77286f797a81f99c470feed09c 
+=======
+commit 0e71982dfe4aaf77286f797a81f99c470feed09c
+>>>>>>> 412c1872115108f071a423068036dca2f0accdd1
     Trabajo en archvos PY de note-plane v1
 
 
@@ -850,18 +844,7 @@ commit 1172e7c09f026f310215722d77fc1a89d058a539
 ```
 
 
-<<<<<<< HEAD
-# Computo en la nube
-<<<<<<< HEAD
-<<<<<<< HEAD
- ---
->>>>>>> 89e0f98 (ejemplos de uso)
-=======
->>>>>>> a2bc917 (Update en campos)
-=======
-=======
 # Documento tecnico de funcionamiento general
->>>>>>> 8c819e0 (Update note-plane.md)
 
 
 ### Fork del proyecto y creacion de MD principal.
@@ -972,13 +955,4 @@ Se mostrara uan simulacion del funcionamiento esperado del proyecto con el propo
 
 | Accion                | Commit Hash |
 | --------------------- | ----------- |
-<<<<<<< HEAD
-<<<<<<< HEAD
-|  Crear fork y agregar md |   1172e7c09f026f310215722d77fc1a89d058a539 |
->>>>>>> eaf7014 (Se agrego la estrutura base del apartado de celn)
-=======
-|  Creacion de MoqUps y definicion |  |
->>>>>>> a5d39f8 (nueva carpeta)
-=======
 |  Creacion de MoqUps y definicion | 4fdef40976e90f67f806028e9f551d726b5d4df0 |
->>>>>>> 8a1209e (Update note-plane.md)
