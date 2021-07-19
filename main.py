@@ -13,7 +13,16 @@ import datetime
 =======
 >>>>>>> ca8357a (Se crearon rutas espesificas)
 =======
+<<<<<<< HEAD
 >>>>>>> ca8357a (Se crearon rutas espesificas)
+=======
+=======
+
+import sys
+import datetime
+>>>>>>> 46ceba701515c021443defe76eb102e29381238e
+>>>>>>> 8e3816a9228fe719e38aa2ee6bfd306939833f66
+>>>>>>> abbbf6fd139677473e2e37dc4edb78abe8e677d2
 import bottle
 import routes.auth
 import routes.storage
