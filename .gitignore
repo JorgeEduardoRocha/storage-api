@@ -4,6 +4,7 @@ gcloud_key.json
 .cache/
 .storage/
 __pycache__/
+__pycache__
 *.py[cod]
 *$py.class
 database.db
