@@ -1,67 +1,85 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ca8357a (Se crearon rutas espesificas)
-from os import environ
-from mimetypes import guess_type
-from pathlib import Path
+"""
+Trabajo en progreso de modelos nesesarios
+"""
+import datetime as dt
 
-try:
-    storage_dir = Path(environ["STORAGE_DIR"]).resolve()
-except KeyError:
-    raise Exception("No storage directory set")
+def creador_nota(nombre, categoria, contenido):
+    """
+    Funcion para generar una nueva nota
+    recibe los argumentos
 
+     - nombre, una cadena de texto que corresponda al nombre de la nota.
+     - categoria, una cadena de texto que carga el mensaje a estructurar.
+     - contenido, una cadena de texto en la cual se alamacena todo el texto que compondra el cuerpo de la nota
+     - fecha, una cadena de texto que represente la fecha en formato iso.
+     - id, es una cadena de texto compuesta por el nombre de la nota y la fecha de creacion
 
-def get_file_to_store(collection, filename):
-    target = (storage_dir / collection / filename)
-    if target.exists():
-        raise Exception("File already exists")
-    target.parent.mkdir(exist_ok=True, parents=True)
-    return target
+    La fecha de creacion de agregara automaticamente, al igual que el identificador correspondiente.
+    El unico campo que sera necesario de llenar al momento de crear una nota es el titulo (se pueden dejar en blanco los campos de categoria, y contenido.).
 
+    Esta funcion regresara un diccionario con 5
+    llaves, 'nombre', 'categoria' y 'contenido', 'fecha', 'id'.
 
-def store_bytes(collection, filename, blob):
-    target = get_file_to_store(collection, filename)
-    target.write_bytes(blob)
+    ### Correcto
+    >>> estructurar_mensaje('Avance de proyecto', 'Escuela', 'se realizaron avances los caules se exponeran a continuacion....')
+    {'nombre': 'Avance de proyecto', 'categoria': 'Escuela', 'contenido': '', 'fecha':'2021-05-01T20:23:22', 'id':'Avance de proyecto-2021-05-01T20:23:22' }
 
+    ### Incorrecto
+    >>>estructurar_mensaje('', 'Escuela', 'se realizaron avances los caules se exponeran a continuacion....')
+    Traceback
+     ...
+    Exception: Nombre invalido.
+    """
+    try:
+        fecha = dt.datetime.fromisoformat(fecha)
+        id = nombre + '-' + fecha
+    except:
+        raise Exception("Nombre no valido.")
+    return {
+        "name": name,
+        "categoria": category,
+        "contenido": content,
+        "fecha": date.isoformat(),
+        "id": id
+        }
 
-def store_string(collection, filename, text):
-    target = get_file_to_store(collection, filename)
-    target.write_text(text)
-
-
-def query_storage(path=""):
-    target = (storage_dir / path)
-    if not target.exists():
-        raise Exception("Does not exists")
-    elif target.is_dir():
-        return dict(
-            path=str(target.relative_to(storage_dir)),
-            type="directory",
-            content=[str(p.relative_to(storage_dir)) for p in target.iterdir()]
-        )
-    elif target.is_file():
-        mime = (guess_type(str(target)) or ["application/octet-stream"])[0]
-        return dict(
-            path=str(target.relative_to(storage_dir)),
-            type="file",
-            metadata=dict(
-                mime=mime,
-                size=target.stat().st_size,
-            )
-        )
-    return {}
+    }
 
 
-def get_storage_file(path=""):
-    target = (storage_dir / path)
-    if not target.exists() or not target.is_file():
-        raise Exception("Does not exists")
-    mime = (guess_type(str(target)) or ["application/octet-stream"])[0]
-    return mime, target.read_bytes()
-<<<<<<< HEAD
-=======
-no se que va aqui saludos
->>>>>>> 0e71982 (Trabajo en archvos PY de note-plane v1)
-=======
->>>>>>> ca8357a (Se crearon rutas espesificas)
+def creador_categoria(nombre, descripcion):
+    """
+    Funcion para generar una nueva categoria
+    recibe los argumentos
+
+     - nombre, una cadena de texto que corresponda al nombre de la categoria.
+     - descripcion, una cadena de texto que contenga informacion adicional para una categoria (campo opcional).
+
+    No se requiere de utilziar una descipcion para la cateroia, este es un campo que puede ir vacio, en cambio es obligatorio
+    colocar el nombre de la categoria (este nombre tiene que ser unico)
+
+    Esta funcion regresara un diccionario con 2
+    llaves, 'nombre', 'descipcion'.
+
+    ### Correcto
+    >>> estructurar_mensaje('Arte', 'En esta categorias encontraras notas relacionadas al arte.')
+    {'nombre': 'Arte', 'descripcion': 'En esta categorias encontraras notas relacionadas al arte.'}
+
+    ### Incorrecto
+    >>>
+    estructurar_mensaje('','En esta categorias encontraras notas relacionadas al arte.')
+    o
+    este caso, es si ya exsistia una categoria con el mismo
+    estructurar_mensaje('Arte','')
+    Traceback
+     ...
+    Exception: Nombre invalido.
+    """
+    try:
+    except:
+        raise Exception("Nombre no valido.")
+    return {
+        "nombre": nombre,
+        "descripcion": descipcion,
+        }
+
+    }
