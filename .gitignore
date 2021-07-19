@@ -1,7 +1,5 @@
 .project-prefixes-owners
 .env
-.gitignore
-.git
 gcloud_key.json
 .cache/
 .storage/
