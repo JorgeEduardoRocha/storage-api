@@ -10,11 +10,14 @@ import datetime
 import bottle
 import routes.auth
 import routes.storage
+import routes.noteplane
+#import modules.noteplane
 import models.base
 
 app = bottle.Bottle()
 
 app.mount("/auth", routes.auth.app)
+app.mount("/noteplane", routes.noteplane.app)
 app.mount("/storage", routes.storage.app)
 
 

@@ -2,9 +2,10 @@
 Trabajo en progreso de modelos nesesarios
 """
 import datetime as dt
+from bottle import response, request
 
-def creador_nota(nombre, categoria, contenido):
-    """
+
+"""
     Funcion para generar una nueva nota
     recibe los argumentos
 
@@ -29,7 +30,9 @@ def creador_nota(nombre, categoria, contenido):
     Traceback
      ...
     Exception: Nombre invalido.
-    """
+"""
+def creador_nota(nombre, categoria, contenido):
+
     try:
         fecha = dt.datetime.fromisoformat(fecha)
         id = nombre + '-' + fecha
@@ -43,11 +46,10 @@ def creador_nota(nombre, categoria, contenido):
         "id": id
         }
 
-    }
 
 
-def creador_categoria(nombre, descripcion):
-    """
+
+"""
     Funcion para generar una nueva categoria
     recibe los argumentos
 
@@ -73,13 +75,14 @@ def creador_categoria(nombre, descripcion):
     Traceback
      ...
     Exception: Nombre invalido.
-    """
+"""
+def creador_categoria(nombre, descripcion):
     try:
+        pass
     except:
         raise Exception("Nombre no valido.")
+
     return {
         "nombre": nombre,
         "descripcion": descipcion,
         }
-
-    }
