@@ -1,8 +1,16 @@
 """
 Trabajo en progreso de modelos nesesarios
 """
-import datetime as dt
-from bottle import response, request
+import json
+from datetime import datetime
+from modules.storage import (
+    store_string, store_bytes,
+    query_storage, get_storage_file
+)
+
+
+
+
 
 
 """
@@ -31,22 +39,67 @@ from bottle import response, request
      ...
     Exception: Nombre invalido.
 """
-def creador_nota(nombre, categoria, contenido):
-
-    try:
-        fecha = dt.datetime.fromisoformat(fecha)
-        id = nombre + '-' + fecha
-    except:
-        raise Exception("Nombre no valido.")
-    return {
-        "name": name,
-        "categoria": category,
-        "contenido": content,
-        "fecha": date.isoformat(),
+#create note
+def create_n(fecha=None, name=None, category=None):
+    id= name +" "+ fecha
+    print("Desde Modulo store")
+    print(name,category,fecha,id)
+    print("Exito")
+    almacenable = {
+        "nombre": name,
+        "category": category,
+        "fecha_de_ingreso": fecha,
         "id": id
-        }
+    }
+    nombre_de_archivo = f"{name}-{category}-{fecha}-{id}.json"
+    datos = store_string(
+        "noteplane/notes",
+        nombre_de_archivo,
+        json.dumps(almacenable)
+    )
+    return datos
 
+#Update note
+def update_n(fecha=None, name=None, category=None):
+    id= name +" "+ fecha
+    print("Desde Modulo store")
+    print(name,category,fecha,id)
+    print("Exito")
+    almacenable = {
+        "nombre": name,
+        "category": category,
+        "fecha_de_ingreso": fecha,
+        "id": id
+    }
+    nombre_de_archivo = f"{name}-{category}-{fecha}-{id}.json"
+    datos = store_string(
+        "noteplane/notes",
+        nombre_de_archivo,
+        json.dumps(almacenable)
+        #update=True
+    )
+    return datos
 
+#consultar nota espesificas
+def query_n_s(nombre=None):
+    query_result = query_storage(
+        "noteplane/notes",
+    )
+    if nombre is not None:
+        return [
+           r
+           for r in query_result["content"]
+           if nombre in r
+        ]
+    print("todo bien")
+
+#Consultar notas
+def query_n(movies=None):
+    query_result = query_storage(
+        "noteplane/notes",
+    )
+    if movies is None:
+        return query_result["content"]
 
 
 """
@@ -76,13 +129,47 @@ def creador_nota(nombre, categoria, contenido):
      ...
     Exception: Nombre invalido.
 """
-def creador_categoria(nombre, descripcion):
-    try:
-        pass
-    except:
-        raise Exception("Nombre no valido.")
+## Create category
+def create_c(name=None, summary=None):
+    print("Desde Modulo store")
+    print(name, summary)
+    print("Exito")
+    almacenable = {
+        "name": name,
+        "summary": summary
+    }
+    nombre_de_archivo = f"{name}-{summary}.json"
+    datos = store_string(
+        "noteplane/category",
+        nombre_de_archivo,
+        json.dumps(almacenable)
+    )
+    return datos
 
-    return {
-        "nombre": nombre,
-        "descripcion": descipcion,
-        }
+#update categorias
+## update category
+def update_c(name=None, summary=None):
+    print("Desde Modulo store")
+    print(name, summary)
+    print("Exito")
+    almacenable = {
+        "name": name,
+        "summary": summary
+    }
+    nombre_de_archivo = f"{name}-{summary}.json"
+    datos = store_string(
+        "noteplane/category",
+        nombre_de_archivo,
+        json.dumps(almacenable)
+        #update=True
+    )
+    return datos
+
+
+#consulta categorias
+def query_c(movies=None):
+    query_result = query_storage(
+        "noteplane/category",
+    )
+    if movies is None:
+        return query_result["content"]

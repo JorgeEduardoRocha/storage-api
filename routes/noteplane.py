@@ -1,11 +1,15 @@
 import bottle
+import datetime as dt
 from bottle import route, run, post, request
 from modules.bottles import BottleJson
-from modules.noteplane import creador_nota, creador_categoria
+from modules.noteplane import  create_n, query_n, create_c, query_c, query_n_s, update_c, update_n
 app = BottleJson()
+
+
+
+## Herramientas de debug
 @app.get("/")
 
-#ejemplos
 @app.get("/foo")
 def foo(*args, **kwargs):
     payload = bottle.request.query
@@ -19,91 +23,113 @@ def bar(*args, **kwargs):
     print(payload)
     raise HTTPError(501)
 
-@app.get("/noteplane/test")
-def index():
-    payload = bottle.request.query
-    print(bottle.request.query_string)
-    print(payload.dict)
-    raise bottle.HTTPError(501, 'algo salio mal')
-    #return dict(code=501, message="not implemented")
-
-
-
-##consultar notas (todas las notas)
-#el proposito de esta funcion es poder consultar todas las notas a las que la persona que realize
-#la consulta pueda acceder
-@app.get("/query/notes")
-def query(*args, **kwargs):
-    payload = bottle.request.query
-    print(bottle.request.query)
-    print(payload.dict)
-    try:
-        nombre = str(payload['nombre'])
-        categoria = str(payload['categoria'])
-        contenido = str(payload['contenido'])
-        print("Datos correctos")
-        raise bottle.HTTPError(201)
-    except:
-        raise bottle.HTTPError(501, "Informacion no valida")
-    raise bottle.HTTPError(500, "Error general")
-
-
-
-
-
-
-#search note by key
-#regresar unformacion detallada de una nota en espesifico buscada por su 'ID'
-@app.get("/query/<key>")
-def query_key(*args, **kwargs):
+#Crear una nueva nota
+# Post crear una nota
+# curl localhost:8080/noteplane/create/note -X POST -H "Content-Type: application/json" -d '{"name": "ejemplo","category":"ejemplo","fecha": "2010-12-12"}'
+@app.post("/create_note")
+def store(*args, **kwargs):
     payload = bottle.request.json
     print(payload)
     try:
-        id = str(payload['id'])
-        print("ID valida")
-        respuesta = query_information(**payload)
-        raise bottle.HTTPError(201)
+        name = str(payload['name'])
+        category = str(payload['category'])
+        fecha = dt.date.fromisoformat(payload['fecha'])
+        #id = "hola"
+        if len(name) == 0:
+            raise Exception()
+        print("dato validos")
+        respuesta = create_n(**payload)
+        print(respuesta)
     except:
-        raise bottle.HTTPError(501, "ID invalida")
-    raise bottle.HTTPError(500, "Error general")
+        print("datos invalidos")
+        raise bottle.HTTPError(400, "Invalid data")
+    raise bottle.HTTPError(201, respuesta)
 
 
-
-
-#Crear una nueva nota
-@app.post("/create")
-def generator(*args, **kwargs):
-    payload = bottle.request.query
-    print(payload.dict)
+#consultar Notas
+## Get lista de notas
+# curl http://localhost:8080/noteplane/query/notes
+@app.get("/query/notes")
+def get_notes(*args, **kwargs):
     try:
-        #movie_id: int(payload['movie_id'])
-        nombre = str(payload['nombre'])
-        categoria = str(payload['categoria'])
-        contenido = str(payload['contenido'])
-        fecha = str(payload['fecha'])
-        id = str(payload['id'])
-        respuesta = creador_nota(**payload)
-        raise bottle.HTTPError(201, "Creada correctamente")
+       respuesta = query_n()
     except:
-        raise bottle.HTTPError(400, "Error de datos, no se pudo crear la nota")
-    raise bottle.HTTPError(500,"Error general")
+        raise bottle.HTTPError(500, "Error interno")
+    raise bottle.HTTPError(200, respuesta)
+
+#consultar Notas espesificas
+## Get movie details
+# curl http://localhost:8080/noteplane/jemeplo -X GET
+@app.get("/query/<nombre>")
+def query_n_s(*args, nombre=None, **kwargs):
+    try:
+        respuesta = query_n_s(nombre = nombre)
+    except:
+        raise bottle.HTTPError(400)
+    raise bottle.HTTPError(200, respuesta)
 
 
 
-#information
-#@app.get("/info/<name>")
-#def info(*args, **kwargs):
-    #aqui codigo
-#    return dict(code=501, message="not implemented")
 
-#create category
-@app.get("/create/category")
-def category_creator(*args, **kwargs):
-    #aqui codigo
-    return dict(code=501, message="not implemented")
 
-#category spesific
-@app.get("/category/<name>")
-def store_record(*args, **kwargs):
-    #aqui codigo
-    return dict(code=501, message="not implemented")
+
+
+
+
+
+
+#consultar Notas espesificas
+@app.get("/query/category/<name>")
+
+
+#Crear una nueva categoria
+# Post crear una categoria
+# curl localhost:8080/noteplane/create/category -X POST -H "Content-Type: application/json" -d '{"name": "ejemplo","description": "ejemplo"}'
+@app.post("/create_category")
+def create_category(*args, **kwargs):
+    payload = bottle.request.json
+    print(payload)
+    try:
+        name = str(payload['name'])
+        summary = str(payload['summary'])
+        if len(name) == 0:
+            raise Exception()
+        print("dato validos")
+        respuesta = create_c(**payload)
+        print(respuesta)
+    except:
+        print("datos invalidos")
+        raise bottle.HTTPError(400, "Invalid data")
+    raise bottle.HTTPError(201, respuesta)
+
+#Actualizar una categoria
+# Post sobre un json ya existente
+# curl localhost:8080/noteplane/create/category/update -X POST -H "Content-Type: application/json" -d '{"name": "ejemplo","description": "ejemplo"}'
+@app.post("/update_category")
+def create_category(*args, **kwargs):
+    payload = bottle.request.json
+    print(payload)
+    try:
+        name = str(payload['name'])
+        summary = str(payload['summary'])
+        if len(name) == 0:
+            raise Exception()
+        print("dato validos")
+        respuesta = update_c(**payload)
+        print(respuesta)
+    except:
+        print("datos invalidos")
+        raise bottle.HTTPError(400, "Invalid data")
+    raise bottle.HTTPError(201, respuesta)
+
+
+#consultar Notas
+## Get lista de notas
+# curl http://localhost:8080/noteplane/query/notes
+@app.get("/query/category")
+def get_notes(*args, **kwargs):
+    try:
+       respuesta = query_c()
+    except:
+        raise bottle.HTTPError(500, "Error interno")
+    raise bottle.HTTPError(200, respuesta)
