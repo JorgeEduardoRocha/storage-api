@@ -10,20 +10,33 @@ import datetime
 import bottle
 import routes.auth
 import routes.storage
+<<<<<<< HEAD
 import routes.noteplane
 #import modules.noteplane
+=======
+import routes.example
+>>>>>>> 7c205d3b455c24d48a96b01fac200d858da39a52
 import models.base
 
 app = bottle.Bottle()
 
 app.mount("/auth", routes.auth.app)
+<<<<<<< HEAD
 app.mount("/noteplane", routes.noteplane.app)
+=======
+app.mount("/example", routes.example.app)
+>>>>>>> 7c205d3b455c24d48a96b01fac200d858da39a52
 app.mount("/storage", routes.storage.app)
 
 
 @app.get("/")
 def root_index(*args, **kwargs):
     return dict(code=200)
+
+@app.get("/hello")
+@app.get("/hello/<name>")
+def root_index(*args, name="Mike", **kwargs):
+    return dict(code=200, hello="how-are-you") | {"from":name}
 
 
 if __name__ == '__main__':
@@ -35,7 +48,8 @@ if __name__ == '__main__':
         if sys.argv[1] == 'db' and 'migrate' in sys.argv:
             print("Database Migration:")
             now_iso = datetime.datetime.utcnow().isoformat()
-            models.base.migrate_database(now_iso)
+            migration_name = now_iso
+            models.base.migrate_database(migration_name)
         else:
             error = True
     elif error:
