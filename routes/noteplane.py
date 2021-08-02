@@ -59,21 +59,14 @@ def get_notes(*args, **kwargs):
 
 #consultar Notas espesificas
 ## Get movie details
-# curl http://localhost:8080/noteplane/jemeplo -X GET
-@app.get("/query/<nombre>")
-def query_n_s(*args, nombre=None, **kwargs):
+# curl http://localhost:8080/noteplane/ejemeplo -X GET
+@app.get("/<id>")
+def query_n_s(*args, id=None, **kwargs):
     try:
-        respuesta = query_n_s(nombre = nombre)
+        respuesta = query_n_s(id = id)
     except:
         raise bottle.HTTPError(400)
     raise bottle.HTTPError(200, respuesta)
-
-
-
-
-
-
-
 
 
 

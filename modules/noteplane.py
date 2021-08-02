@@ -41,7 +41,7 @@ from modules.storage import (
 """
 #create note
 def create_n(fecha=None, name=None, category=None):
-    id= name +" "+ fecha
+    id= name +"-"+ fecha
     print("Desde Modulo store")
     print(name,category,fecha,id)
     print("Exito")
@@ -75,21 +75,21 @@ def update_n(fecha=None, name=None, category=None):
     datos = store_string(
         "noteplane/notes",
         nombre_de_archivo,
-        json.dumps(almacenable)
-        #update=True
+        json.dumps(almacenable),
+        update=True
     )
     return datos
 
 #consultar nota espesificas
-def query_n_s(nombre=None):
+def query_n_s(id=None):
     query_result = query_storage(
         "noteplane/notes",
     )
-    if nombre is not None:
+    if id is not None:
         return [
            r
            for r in query_result["content"]
-           if nombre in r
+           if id in r
         ]
     print("todo bien")
 
@@ -160,8 +160,8 @@ def update_c(name=None, summary=None):
     datos = store_string(
         "noteplane/category",
         nombre_de_archivo,
-        json.dumps(almacenable)
-        #update=True
+        json.dumps(almacenable),
+        update=True
     )
     return datos
 

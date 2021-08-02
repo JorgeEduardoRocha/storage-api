@@ -10,22 +10,15 @@ import datetime
 import bottle
 import routes.auth
 import routes.storage
-<<<<<<< HEAD
 import routes.noteplane
 #import modules.noteplane
-=======
-import routes.example
->>>>>>> 7c205d3b455c24d48a96b01fac200d858da39a52
+#import routes.example
 import models.base
-
 app = bottle.Bottle()
 
 app.mount("/auth", routes.auth.app)
-<<<<<<< HEAD
 app.mount("/noteplane", routes.noteplane.app)
-=======
-app.mount("/example", routes.example.app)
->>>>>>> 7c205d3b455c24d48a96b01fac200d858da39a52
+#app.mount("/example", routes.example.app)
 app.mount("/storage", routes.storage.app)
 
 
