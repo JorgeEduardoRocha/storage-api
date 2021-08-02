@@ -81,7 +81,7 @@ def update_n(fecha=None, name=None, category=None):
     return datos
 
 #consultar nota espesificas
-def query_n_s(id=None):
+def query_s(id=None):
     query_result = query_storage(
         "noteplane/notes",
     )

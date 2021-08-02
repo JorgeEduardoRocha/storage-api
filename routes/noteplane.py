@@ -2,7 +2,7 @@ import bottle
 import datetime as dt
 from bottle import route, run, post, request
 from modules.bottles import BottleJson
-from modules.noteplane import  create_n, query_n, create_c, query_c, query_n_s, update_c, update_n
+from modules.noteplane import  create_n, query_n, create_c, query_c, query_s, update_c, update_n
 app = BottleJson()
 
 
@@ -63,7 +63,7 @@ def get_notes(*args, **kwargs):
 @app.get("/<id>")
 def query_n_s(*args, id=None, **kwargs):
     try:
-        respuesta = query_n_s(id = id)
+        respuesta = query_s(id = id)
     except:
         raise bottle.HTTPError(400)
     raise bottle.HTTPError(200, respuesta)
