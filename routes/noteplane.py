@@ -58,8 +58,8 @@ def get_notes(*args, **kwargs):
     raise bottle.HTTPError(200, respuesta)
 
 #consultar Notas espesificas
-## Get movie details
-# curl http://localhost:8080/noteplane/ejemeplo -X GET
+## Get nota espesifica
+# curl http://localhost:8080/noteplane/ejemplos11-2010-12-12 -X GET
 @app.get("/<id>")
 def query_n_s(*args, id=None, **kwargs):
     try:
