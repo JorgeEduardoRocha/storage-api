@@ -61,7 +61,7 @@ def create_n(fecha=None, name=None, category=None):
 
 #Update note
 def update_n(fecha=None, name=None, category=None):
-    id= name +" "+ fecha
+    id= name +"-"+ fecha
     print("Desde Modulo store")
     print(name,category,fecha,id)
     print("Exito")
@@ -94,11 +94,11 @@ def query_s(id=None):
     print("todo bien")
 
 #Consultar notas
-def query_n(movies=None):
+def query_n(notes=None):
     query_result = query_storage(
         "noteplane/notes",
     )
-    if movies is None:
+    if notes is None:
         return query_result["content"]
 
 
@@ -167,9 +167,9 @@ def update_c(name=None, summary=None):
 
 
 #consulta categorias
-def query_c(movies=None):
+def query_c(notes=None):
     query_result = query_storage(
         "noteplane/category",
     )
-    if movies is None:
+    if notes is None:
         return query_result["content"]
