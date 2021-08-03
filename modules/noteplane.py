@@ -98,7 +98,7 @@ def query_n(notes=None):
     query_result = query_storage(
         "noteplane/notes",
     )
-    if notes is None:
+    if notes is not None:
         return query_result["content"]
 
 
@@ -171,5 +171,5 @@ def query_c(notes=None):
     query_result = query_storage(
         "noteplane/category",
     )
-    if notes is None:
+    if notes is not None:
         return query_result["content"]
