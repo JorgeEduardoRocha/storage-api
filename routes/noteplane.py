@@ -34,7 +34,6 @@ def store(*args, **kwargs):
         name = str(payload['name'])
         category = str(payload['category'])
         fecha = dt.date.fromisoformat(payload['fecha'])
-        #id = "hola"
         if len(name) == 0:
             raise Exception()
         print("dato validos")
@@ -44,6 +43,29 @@ def store(*args, **kwargs):
         print("datos invalidos")
         raise bottle.HTTPError(400, "Invalid data")
     raise bottle.HTTPError(201, respuesta)
+
+
+#Actualizar una nota
+# Post sobre un json ya existente
+# curl localhost:8080/noteplane/note/update -X POST -H "Content-Type: application/json" -d '{"name": "ejemplo","description": "ejemplo"}'
+@app.post("/note/update")
+def create_category(*args, **kwargs):
+    payload = bottle.request.json
+    print(payload)
+    try:
+        name = str(payload['name'])
+        category = str(payload['category'])
+        fecha = dt.date.fromisoformat(payload['fecha'])
+        if len(name) == 0:
+            raise Exception()
+        print("dato validos")
+        respuesta = update_c(**payload)
+        print(respuesta)
+    except:
+        print("datos invalidos")
+        raise bottle.HTTPError(400, "Invalid data")
+    raise bottle.HTTPError(201, respuesta)
+
 
 
 #consultar Notas
@@ -95,30 +117,12 @@ def create_category(*args, **kwargs):
         raise bottle.HTTPError(400, "Invalid data")
     raise bottle.HTTPError(201, respuesta)
 
-#Actualizar una categoria
-# Post sobre un json ya existente
-# curl localhost:8080/noteplane/create/category/update -X POST -H "Content-Type: application/json" -d '{"name": "ejemplo","description": "ejemplo"}'
-@app.post("/update_category")
-def create_category(*args, **kwargs):
-    payload = bottle.request.json
-    print(payload)
-    try:
-        name = str(payload['name'])
-        summary = str(payload['summary'])
-        if len(name) == 0:
-            raise Exception()
-        print("dato validos")
-        respuesta = update_c(**payload)
-        print(respuesta)
-    except:
-        print("datos invalidos")
-        raise bottle.HTTPError(400, "Invalid data")
-    raise bottle.HTTPError(201, respuesta)
+
 
 
 #consultar Notas
 ## Get lista de notas
-# curl http://localhost:8080/noteplane/query/notes
+# curl http://localhost:8080/noteplane/query/category
 @app.get("/query/category")
 def get_notes(*args, **kwargs):
     try:

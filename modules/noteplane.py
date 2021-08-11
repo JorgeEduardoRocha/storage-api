@@ -7,12 +7,6 @@ from modules.storage import (
     store_string, store_bytes,
     query_storage, get_storage_file
 )
-
-
-
-
-
-
 """
     Funcion para generar una nueva nota
     recibe los argumentos
@@ -39,7 +33,8 @@ from modules.storage import (
      ...
     Exception: Nombre invalido.
 """
-#create note
+
+#Crear nota
 def create_n(fecha=None, name=None, category=None):
     id= name +"-"+ fecha
     print("Desde Modulo store")
@@ -59,7 +54,8 @@ def create_n(fecha=None, name=None, category=None):
     )
     return datos
 
-#Update note
+
+#Update nota
 def update_n(fecha=None, name=None, category=None):
     id= name +"-"+ fecha
     print("Desde Modulo store")
@@ -80,6 +76,7 @@ def update_n(fecha=None, name=None, category=None):
     )
     return datos
 
+
 #consultar nota espesificas
 def query_s(id=None):
     query_result = query_storage(
@@ -93,13 +90,13 @@ def query_s(id=None):
         ]
     print("todo bien")
 
+
 #Consultar notas
 def query_n(notes=None):
     query_result = query_storage(
         "noteplane/notes",
     )
-    if notes is not None:
-        return query_result["content"]
+    return query_result["content"]
 
 
 """
@@ -146,8 +143,8 @@ def create_c(name=None, summary=None):
     )
     return datos
 
-#update categorias
-## update category
+
+# Update Category
 def update_c(name=None, summary=None):
     print("Desde Modulo store")
     print(name, summary)
@@ -171,5 +168,4 @@ def query_c(notes=None):
     query_result = query_storage(
         "noteplane/category",
     )
-    if notes is not None:
-        return query_result["content"]
+    return query_result["content"]
