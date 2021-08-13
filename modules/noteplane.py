@@ -1,52 +1,50 @@
-"""
-Trabajo en progreso de modelos nesesarios
-"""
 import json
 from datetime import datetime
 from modules.storage import (
     store_string, store_bytes,
     query_storage, get_storage_file
 )
-"""
-    Funcion para generar una nueva nota
-    recibe los argumentos
 
-     - nombre, una cadena de texto que corresponda al nombre de la nota.
-     - categoria, una cadena de texto que carga el mensaje a estructurar.
-     - contenido, una cadena de texto en la cual se alamacena todo el texto que compondra el cuerpo de la nota
-     - fecha, una cadena de texto que represente la fecha en formato iso.
-     - id, es una cadena de texto compuesta por el nombre de la nota y la fecha de creacion
-
-    La fecha de creacion de agregara automaticamente, al igual que el identificador correspondiente.
-    El unico campo que sera necesario de llenar al momento de crear una nota es el titulo (se pueden dejar en blanco los campos de categoria, y contenido.).
-
-    Esta funcion regresara un diccionario con 5
-    llaves, 'nombre', 'categoria' y 'contenido', 'fecha', 'id'.
-
-    ### Correcto
-    >>> estructurar_mensaje('Avance de proyecto', 'Escuela', 'se realizaron avances los caules se exponeran a continuacion....')
-    {'nombre': 'Avance de proyecto', 'categoria': 'Escuela', 'contenido': '', 'fecha':'2021-05-01T20:23:22', 'id':'Avance de proyecto-2021-05-01T20:23:22' }
-
-    ### Incorrecto
-    >>>estructurar_mensaje('', 'Escuela', 'se realizaron avances los caules se exponeran a continuacion....')
-    Traceback
-     ...
-    Exception: Nombre invalido.
-"""
 
 #Crear nota
-def create_n(fecha=None, name=None, category=None):
-    id= name +"-"+ fecha
-    print("Desde Modulo store")
-    print(name,category,fecha,id)
+def create_n(datee=None, name=None, category=None, content=None):
+    """
+        Funcion para generar una nueva nota
+        recibe los argumentos
+
+         - name, una cadena de texto que corresponda al nombre de la nota.
+         - category, una cadena de texto que carga el mensaje a estructurar.
+         - date, una cadena de texto en la cual se alamacena todo el texto que compondra el cuerpo de la nota
+         - fecha, una cadena de texto que represente la fecha en formato iso.
+         - id, es una cadena de texto compuesta por el nombre de la nota y la fecha de creacion
+
+        La fecha de creacion de agregara automaticamente, al igual que el identificador correspondiente.
+        El unico campo que sera necesario de llenar al momento de crear una nota es el titulo (se pueden dejar en blanco los campos de categoria, y contenido.).
+
+        Esta funcion regresara un diccionario con 5
+        llaves, 'nombre', 'categoria' y 'contenido', 'fecha', 'id'.
+
+        ### Correcto
+        >>> estructurar_mensaje('Avance de proyecto', 'Escuela', 'se realizaron avances los caules se exponeran a continuacion....')
+        {'name': 'Avance de proyecto', 'category': 'Escuela', 'content': '', 'date':'2021-05-01T20:23:22', 'id':'Avance de proyecto-2021-05-01T20:23:22' }
+
+        ### Incorrecto
+        >>>estructurar_mensaje('', 'Escuela', 'se realizaron avances los caules se exponeran a continuacion....')
+        Traceback
+         ...
+        Exception: Nombre invalido.
+    """
+    id= name +"-"+ datee
+    print(name,category,datee,content,id)
     print("Exito")
     almacenable = {
-        "nombre": name,
+        "name": name,
         "category": category,
-        "fecha_de_ingreso": fecha,
+        "datee": datee,
+        "content": content,
         "id": id
     }
-    nombre_de_archivo = f"{name}-{category}-{fecha}-{id}.json"
+    nombre_de_archivo = f"{name}-{category}-{datee}-{id}.json"
     datos = store_string(
         "noteplane/notes",
         nombre_de_archivo,
@@ -56,18 +54,45 @@ def create_n(fecha=None, name=None, category=None):
 
 
 #Update nota
-def update_n(fecha=None, name=None, category=None):
-    id= name +"-"+ fecha
+def update_n(datee=None, name=None, category=None, content=None):
+    """
+        Funcion para actualizar una nueva nota
+        recibe los argumentos
+
+         - nombre, una cadena de texto que corresponda al nombre de la nota.
+         - categoria, una cadena de texto que carga el mensaje a estructurar.
+         - contenido, una cadena de texto en la cual se alamacena todo el texto que compondra el cuerpo de la nota
+         - fecha, una cadena de texto que represente la fecha en formato iso.
+         - id, es una cadena de texto compuesta por el nombre de la nota y la fecha de creacion
+
+        La fecha de creacion de agregara automaticamente, al igual que el identificador correspondiente.
+        El unico campo que sera necesario de llenar al momento de crear una nota es el titulo (se pueden dejar en blanco los campos de categoria, y contenido.).
+
+        Esta funcion regresara un diccionario con 5
+        llaves, 'nombre', 'categoria' y 'contenido', 'fecha', 'id'.
+
+        ### Correcto
+        >>> estructurar_mensaje('Avance de proyecto', 'Escuela', 'se realizaron avances los caules se exponeran a continuacion....')
+        {'nombre': 'Avance de proyecto', 'categoria': 'Escuela', 'contenido': '', 'fecha':'2021-05-01T20:23:22', 'id':'Avance de proyecto-2021-05-01T20:23:22' }
+
+        ### Incorrecto
+        >>>estructurar_mensaje('', 'Escuela', 'se realizaron avances los caules se exponeran a continuacion....')
+        Traceback
+         ...
+        Exception: Nombre invalido.
+    """
+    id= name +"-"+ datee
     print("Desde Modulo store")
-    print(name,category,fecha,id)
+    print(name,category,datee,content,id)
     print("Exito")
     almacenable = {
         "nombre": name,
         "category": category,
-        "fecha_de_ingreso": fecha,
+        "date": datee,
+        "content": content,
         "id": id
     }
-    nombre_de_archivo = f"{name}-{category}-{fecha}-{id}.json"
+    nombre_de_archivo = f"{name}-{category}-{datee}-{id}.json"
     datos = store_string(
         "noteplane/notes",
         nombre_de_archivo,
@@ -92,6 +117,16 @@ def query_s(id=None):
 
 
 #Consultar notas
+"""
+    Funcion para consultar una nota
+    trabaja con el argumento
+
+     - notes, una cadena de texto que corresponda al nombre de las notes.
+
+    No acepta ningun tipo de argumento mediante la solicitud curl
+
+    Esta funcion regresara un diccionario con todas las notas que se encuentren almacenadas.
+"""
 def query_n(notes=None):
     query_result = query_storage(
         "noteplane/notes",
@@ -99,7 +134,11 @@ def query_n(notes=None):
     return query_result["content"]
 
 
-"""
+
+## Create category
+def create_c(name=None, summary=None):
+
+    """
     Funcion para generar una nueva categoria
     recibe los argumentos
 
@@ -125,9 +164,8 @@ def query_n(notes=None):
     Traceback
      ...
     Exception: Nombre invalido.
-"""
-## Create category
-def create_c(name=None, summary=None):
+    """
+
     print("Desde Modulo store")
     print(name, summary)
     print("Exito")
@@ -140,25 +178,6 @@ def create_c(name=None, summary=None):
         "noteplane/category",
         nombre_de_archivo,
         json.dumps(almacenable)
-    )
-    return datos
-
-
-# Update Category
-def update_c(name=None, summary=None):
-    print("Desde Modulo store")
-    print(name, summary)
-    print("Exito")
-    almacenable = {
-        "name": name,
-        "summary": summary
-    }
-    nombre_de_archivo = f"{name}-{summary}.json"
-    datos = store_string(
-        "noteplane/category",
-        nombre_de_archivo,
-        json.dumps(almacenable),
-        update=True
     )
     return datos
 

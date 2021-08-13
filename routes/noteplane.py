@@ -2,7 +2,7 @@ import bottle
 import datetime as dt
 from bottle import route, run, post, request
 from modules.bottles import BottleJson
-from modules.noteplane import  create_n, query_n, create_c, query_c, query_s, update_c, update_n
+from modules.noteplane import  create_n, query_n, create_c, query_c, query_s, update_n
 app = BottleJson()
 
 
@@ -25,7 +25,7 @@ def bar(*args, **kwargs):
 
 #Crear una nueva nota
 # Post crear una nota
-# curl localhost:8080/noteplane/create/note -X POST -H "Content-Type: application/json" -d '{"name": "ejemplo","category":"ejemplo","fecha": "2010-12-12"}'
+# curl localhost:8080/noteplane/create_note -X POST -H "Content-Type: application/json" -d '{"name": "ejemplo12","category":"ejemplo","datee": "2010-12-12", "content":""}'
 @app.post("/create_note")
 def store(*args, **kwargs):
     payload = bottle.request.json
@@ -33,7 +33,8 @@ def store(*args, **kwargs):
     try:
         name = str(payload['name'])
         category = str(payload['category'])
-        fecha = dt.date.fromisoformat(payload['fecha'])
+        datee = dt.date.fromisoformat(payload['datee'])
+        content = str(payload['content'])
         if len(name) == 0:
             raise Exception()
         print("dato validos")
@@ -47,7 +48,7 @@ def store(*args, **kwargs):
 
 #Actualizar una nota
 # Post sobre un json ya existente
-# curl localhost:8080/noteplane/note/update -X POST -H "Content-Type: application/json" -d '{"name": "ejemplo","description": "ejemplo"}'
+# curl localhost:8080/noteplane/note/update -X POST -H "Content-Type: application/json" -d '{"name": "ejemplo12","category":"ejemplo","datee": "2010-12-12", "content":""}'
 @app.post("/note/update")
 def create_category(*args, **kwargs):
     payload = bottle.request.json
@@ -56,6 +57,7 @@ def create_category(*args, **kwargs):
         name = str(payload['name'])
         category = str(payload['category'])
         fecha = dt.date.fromisoformat(payload['fecha'])
+        content = str(payload['content'])
         if len(name) == 0:
             raise Exception()
         print("dato validos")
@@ -81,7 +83,7 @@ def get_notes(*args, **kwargs):
 
 #consultar Notas espesificas
 ## Get nota espesifica
-# curl http://localhost:8080/noteplane/ejemplos11-2010-12-12 -X GET
+# curl http://localhost:8080/noteplane/ejemplos-2010-12-12 -X GET
 @app.get("/<id>")
 def query_n_s(*args, id=None, **kwargs):
     try:
