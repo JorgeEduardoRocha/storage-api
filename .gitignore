@@ -11,3 +11,5 @@ database.db
 logs/
 migrations/
 noteplane/
+storage/noteplane/notes
+storage/noteplane/category
