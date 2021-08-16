@@ -10,18 +10,6 @@ app = BottleJson()
 ## Herramientas de debug
 @app.get("/")
 
-@app.get("/foo")
-def foo(*args, **kwargs):
-    payload = bottle.request.query
-    print(bottle.request.query)
-    print(payload.dict)
-    raise bottle.HTTPError(501,"error")
-
-@app.post("/bar")
-def bar(*args, **kwargs):
-    payload = bottle.request.json
-    print(payload)
-    raise HTTPError(501)
 
 #Crear una nueva nota
 # Post crear una nota
@@ -56,7 +44,7 @@ def create_category(*args, **kwargs):
     try:
         name = str(payload['name'])
         category = str(payload['category'])
-        fecha = dt.date.fromisoformat(payload['fecha'])
+        datee = dt.date.fromisoformat(payload['datee'])
         content = str(payload['content'])
         if len(name) == 0:
             raise Exception()
