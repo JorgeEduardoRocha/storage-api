@@ -443,3 +443,82 @@ Se mostrara uan simulacion del funcionamiento esperado del proyecto con el propo
 | Accion                | Commit Hash |
 | --------------------- | ----------- |
 |  Creacion de MoqUps y definicion | 4fdef40976e90f67f806028e9f551d726b5d4df0 |
+
+
+# Casos de uso
+
+### Crear una nueva nota
+- Metodo `Post`
+- Objetivo: Crear una nueva nota
+- Se requieren ingresar los valores de
+  - `name`
+  - `date`
+  - `category`
+  - `Content`
+- Si no se ingresa nombre de la nota no se podra crear
+- Si la nota tiene el mismo nombre que una nota ya axistente no se podra crear
+
+En esta funcion se crea una nota nueva, ingresando todos los datos correctos.
+```
+curl localhost:8080/noteplane/create_note -X POST -H "Content-Type: application/json" -d '{"name": "ejemplo final","category":"ejemplo","datee": "2012-12-12", "content":""}'
+```
+
+
+### Actualizar una nota
+- Metodo `Post` (sobre json ya existente)
+- Objetivo: Actualizar una nota ya existente
+- Se requiere ingresar el nombre exacto de la nota que se desea Actualizar
+- Si no se ingresa exactamente el nombre de la nota que se desea actualizar no funcionara y marcara errors
+
+En esta funcion se remplaza un json de una nota que se encuentre ya creada, para esto se require el nombre de la nota, que corresponde al nombre del archivo, para poder remplazarla.
+```
+curl localhost:8080/noteplane/note/update -X POST -H "Content-Type: application/json" -d '{"name": "ejemplo12","category":"ejemplo","datee": "2010-12-12", "content":""}'
+```
+
+
+### consultar Notas
+- Metodo `GET`
+- Objetivo: Consultar todas las notas que se encuentren disponibles.
+- Solo se requiere hacer una consulta a la ruta, no se requiere espesificar ningun parametro
+
+En esta funcion se regresa una lista con los json que conforman todas las notas disponibles.
+```
+curl localhost:8080/noteplane/query/notes
+```
+
+
+### consultar Notas espesificas
+- Metodo `GET`
+- Objetivo: Consultar una nota espesifica con su `name`
+- Se requiere del `name` de la nota, este dato debe ser exato, en caso de ingresar un `name` no valido, regresara un error y no regresara informacion
+
+En esta funcion se regresa una nota espesifica con su `name` el cual es un valor auto generado, que se genera atravez de la informacion que compone la nota.
+```
+curl localhost:8080/noteplane/ejemplos1 -X GET
+```
+
+### Crear una nueva categoria
+- Metodo `POST`
+- Objetivo: Crear una categoria nueva
+- Se requieren ingresar los siguentes parametros para crear la categoria
+  - `name`
+  - `description`
+- Se requiere ingresar el nombre de la categoria, de otro modo la funcion regresara un error
+- Si se ingresa un nombre de categoria que ya existe regresara un error
+- Es posible no definir una descipcion para la categoria
+
+En esta funcion se genera un archivo json el cual corresponde a una categoria, con informacion basica para poder identificarla.
+
+```
+curl localhost:8080/noteplane/create_category -X POST -H "Content-Type: application/json" -d '{"name": "motores","summary": "todo respecto a carros y motores"}'
+```
+
+### consultar Notas
+- Metodo `GET`
+- Objetivo: Consultar todas las categorias creadas
+- Solo se require hacer la consulta en la ruta para obtener una lista de los json que corresponden a cada categoria
+
+En esta funcion se regresaran todas las categorias disponibles.
+```
+curl localhost:8080/noteplane/query/category
+```

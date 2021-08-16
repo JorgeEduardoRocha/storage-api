@@ -13,3 +13,4 @@ migrations/
 noteplane/
 storage/noteplane/notes
 storage/noteplane/category
+.gitognore

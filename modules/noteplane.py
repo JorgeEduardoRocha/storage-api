@@ -7,7 +7,7 @@ from modules.storage import (
 
 
 #Crear nota
-def create_n(datee=None, name=None, category=None, content=None):
+def create_n(datee=None, name=None, category=None, body=None):
     """
         Funcion para generar una nueva nota
         recibe los argumentos
@@ -34,17 +34,18 @@ def create_n(datee=None, name=None, category=None, content=None):
          ...
         Exception: Nombre invalido.
     """
-    id= name +"-"+ datee
-    print(name,category,datee,content,id)
+    #+"-"+ datee
+    id= name+"1"
+    print(name,category,datee,body,id)
     print("Exito")
     almacenable = {
         "name": name,
         "category": category,
         "datee": datee,
-        "content": content,
+        "body": body,
         "id": id
     }
-    nombre_de_archivo = f"{name}-{category}-{datee}-{id}.json"
+    nombre_de_archivo = f"{name}-{category}.json"
     datos = store_string(
         "noteplane/notes",
         nombre_de_archivo,
@@ -54,7 +55,7 @@ def create_n(datee=None, name=None, category=None, content=None):
 
 
 #Update nota
-def update_n(datee=None, name=None, category=None, content=None):
+def update_n(datee=None, name=None, category=None, body=None):
     """
         Funcion para actualizar una nueva nota
         recibe los argumentos
@@ -83,16 +84,16 @@ def update_n(datee=None, name=None, category=None, content=None):
     """
     id= name +"-"+ datee
     print("Desde Modulo store")
-    print(name,category,datee,content,id)
+    print(name,category,datee,body,id)
     print("Exito")
     almacenable = {
         "nombre": name,
         "category": category,
         "date": datee,
-        "content": content,
+        "body": body,
         "id": id
     }
-    nombre_de_archivo = f"{name}-{category}-{datee}-{id}.json"
+    nombre_de_archivo = f"{name}-{category}.json"
     datos = store_string(
         "noteplane/notes",
         nombre_de_archivo,
@@ -101,11 +102,20 @@ def update_n(datee=None, name=None, category=None, content=None):
     )
     return datos
 
+"""
+    Funcion para consultar una nota
+    trabaja con el argumento
 
+     - id, Una cadena de texto autogenerada que corresponde a una nota (solo existe una id por nota y esta no debe repetirse).
+
+    Solo acepta una id creada argumento mediante la solicitud curl
+
+    Esta funcion regresara un diccionario con todas las notas que se encuentren almacenadas.
+"""
 #consultar nota espesificas
-def query_s(id=None):
+def afun(id=None):
     query_result = query_storage(
-        "noteplane/notes",
+        "noteplane/notes"
     )
     if id is not None:
         return [
@@ -116,18 +126,20 @@ def query_s(id=None):
     print("todo bien")
 
 
+
+
 #Consultar notas
-"""
-    Funcion para consultar una nota
-    trabaja con el argumento
-
-     - notes, una cadena de texto que corresponda al nombre de las notes.
-
-    No acepta ningun tipo de argumento mediante la solicitud curl
-
-    Esta funcion regresara un diccionario con todas las notas que se encuentren almacenadas.
-"""
 def query_n(notes=None):
+    """
+        Funcion para consultar una nota
+        trabaja con el argumento
+
+         - notes, una cadena de texto que corresponda al nombre de las notes.
+
+        No acepta ningun tipo de argumento mediante la solicitud curl
+
+        Esta funcion regresara un diccionario con todas las notas que se encuentren almacenadas.
+    """
     query_result = query_storage(
         "noteplane/notes",
     )
@@ -184,6 +196,16 @@ def create_c(name=None, summary=None):
 
 #consulta categorias
 def query_c(notes=None):
+    """
+        Funcion para consultar una categoria
+        trabaja con el argumento
+
+         - category, una cadena de texto que corresponda al nombre de las categorias.
+
+        No acepta ningun tipo de argumento mediante la solicitud curl
+
+        Esta funcion regresara un diccionario con todas las las categorias que se encuentren creadas y almacenadas.
+    """
     query_result = query_storage(
         "noteplane/category",
     )
