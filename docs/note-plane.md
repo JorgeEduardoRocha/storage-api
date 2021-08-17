@@ -171,15 +171,13 @@ Esta es la manera en la cual almacenaremos los datos.
 
 | Path                  | Descripción |
 | --------------------- | ----------- |
-| `/note/query`           | Se podran consultar las notas almacenadas con su nombre |
-| `/note/query/<key>`     | Se podran consultar las notas almacenadas con una palabra clave  |
-| `/note/query/<creator>` | Se mostraran las notas de un creador en espesifico |
-| `/note/creator/`        | Se mostraran los creadores de notas |
-| `/note/info/<name>`     | Se mostrara toda la informacion relacionada a la nota seleccionada   |
-| `/note/date`            | Se mostrara la fecha de creacion de la nota |
-| `/note/create/category` | Se podra crear una nueva categoria |
-| `/note/category/<name>` | Se se mostraran las notas que correspondan a esa categoria |
-| `/note/create/note`     | Se podran crear notas |
+| `/noteplane/create_note`           | Crear una nota completamente nueva |
+| `/noteplane/update`                | Actualizar una nota ya existente |
+| `/noteplane/<id>`                  | Regresa una nota en espesifico |
+| `/noteplane/query/notes`           | Regresa todas las notas disponibles |
+| `/noteplane/create_category`       | Crear una nota completamente nueva |
+| `/noteplane/query/category`        | Regresa todas las nota creadas |
+
 
 ---
 agregar verbos HTTP ^
@@ -187,18 +185,22 @@ agregar verbos HTTP ^
 
 ## Implementación de rutas para los recursos
 
-### POST /create/note
+### POST /create_note
 - Recibe datos de creacion de notas
 - 201,Crear nota y regresar identificador de la nota
 - D.O.M, regresa estructura de mensaje de fallo
 
-### GET /query/<key>
-- Recibe el identificador correspondiente a uno nota
-- 200 regresa la nota que corresponda
+### POST /update
+- Recibe datos de creacion de notas
+- 201,Crear nota y regresar identificador de la nota
+- D.O.M, regresa estructura de mensaje de fallo
+
+### GET /query/notes
+- 200, regresa la nota que correspondan a esa categoria
 - D.O.M, regresa mensaje de nota no encontrada 404
 
-### GET /query/<creador>
-- Recibe el nombre del creador
+### GET / < id >
+- Recibe el nombre de la nota
 - 200, regresa la nota que correspondan a ese creador
 - D.O.M, regresa mensaje de creador no encontrado
 
@@ -206,24 +208,11 @@ agregar verbos HTTP ^
 - 200, regresa la nota que correspondan a esa categoria
 - D.O.M, regresa mensaje de categoria no encontrada
 
-### GET /query/<name>
-- Recibe el nombre de una nota
-- 200, regresa la nota que correspondan a ese nombre
-- D.O.M, regresa mensaje de fallo en formato json
 
-### GET /category/<name>
-- Recibe el nombre de alguna categoria existente
-- 200, regresa las notas que correspondan a esa categoria
-- D.O.M, regresa mensaje de fallo general
-
-### POST /create/category
+### POST /noteplane/create_category
+- Recibe datos de creacion de categorias
 - 201, registrar una nueva categoria
 - D.O.M, regresa mensaje de fallo
-
-### GET /info/<key>
-- Recibe el identificador de una nota
-- 200, Datos detallados de la nota espesifica que corresponda a la key escrita
-- D.O.M, regresa mensaje de contenido enextitente (404)
 
 ---
 
@@ -290,45 +279,6 @@ Todas las notas seran en formato JSON y se almacenaran de manera local o en alma
 
 - `note-plane/`
 
-## Historial de git
-
-```
-
-commit a2bc917d97c0c1afd62384ab8acdaf404ae68fab
-    Update en campos
-    introduccion y definicion de proyecto
-    formatos de presentaciones generales
-
-
-commit 89e0f98de4c11f57a6aa5bc83ec589b87eeb400e
-    ejemplos de uso
-
-
-commit 447f9b44ef05fcc0b473aee164b0d4344cf5a839
-    descripcion general
-
-
-commit 38956fc244442f8ad2ebacc1a1a5a4681295eb11
-    formato tabla
-
-
-commit b7b94a123872619b1e88825d5fefc293e5aa77dc
-    querys
-
-
-commit 17f8de0d0c3b1f5a857afe0110f40bb3569366c1
-    crear nota
-
-
-commit 0e71982dfe4aaf77286f797a81f99c470feed09c
-    Trabajo en archvos PY de note-plane v1
-
-
-commit 1172e7c09f026f310215722d77fc1a89d058a539
-    add md
-
-
-```
 
 
 # Documento tecnico de funcionamiento general
@@ -445,7 +395,7 @@ Se mostrara uan simulacion del funcionamiento esperado del proyecto con el propo
 |  Creacion de MoqUps y definicion | 4fdef40976e90f67f806028e9f551d726b5d4df0 |
 
 
-# Casos de uso
+## Casos de uso
 
 ### Crear una nueva nota
 - Metodo `Post`
@@ -522,3 +472,7 @@ En esta funcion se regresaran todas las categorias disponibles.
 ```
 curl localhost:8080/noteplane/query/category
 ```
+
+# Planeacion para frontend
+
+El proposito de la interfaz grafica es cumplir con los objetivos planteados desde el comienzo del proyecto, con lo que se busca una herramienta
