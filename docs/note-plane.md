@@ -475,4 +475,40 @@ curl localhost:8080/noteplane/query/category
 
 # Planeacion para frontend
 
-El proposito de la interfaz grafica es cumplir con los objetivos planteados desde el comienzo del proyecto, con lo que se busca una herramienta
+El proposito de la interfaz grafica es cumplir con los objetivos planteados desde el comienzo del proyecto, con lo que se busca una interfaz de usuario amigable, eficiente y que 
+corresponda con las funciones que el proyecto tiene.
+
+las funciones nesesarios son 
+- Crear notas
+- Crear categorias
+- Consultar notas
+- Consultar categorias
+
+Con lo dicho anteriormente se planea implementar una interfaz amigable y sobre todo que sea pratica para el usuario, por la naturaleza del proyecto y al ser algo tam simple como
+el crear notas es evidente que cualquier contratiempo al momento de crearlas podria ser una molesta mayor que simplemente utilizar el primer metodo que se tenga a disposicion.
+
+#### Ejemplos de interfaz de usuario
+
+###### para comenzar se planea tener un dashboard de facil acceso como el que se muestra a contiunuacion.
+<img src="https://github.com/JorgeEduardoRocha/storage-api/blob/1b97f54621cf5048f35a5b99e95b3b7a7d7ecab4/docs/assets/note-plane-0000-Dashboard%20principal.png" width="550">  
+
+Como se puede observar en este dashboard se dan la mayoria de las funciones principales, de esta manera el usuario tiene todo a mano lo mas rapido posible.
+
+
+###### Creacion de nota
+<img src="https://github.com/JorgeEduardoRocha/storage-api/blob/24a356148b0e4a677cb8e9a92eb821321529393e/docs/assets/note-plane-0001-Crear%20nota.png" width="550"> 
+
+Al igual que en el ejemplo anterior el enfoque esta en no perder tiempo, la interfaz para crear una nota es simple pero duficiente para que no sea un inconveniente el crearla.
+
+
+
+###### Editar una nota
+<img src="https://github.com/JorgeEduardoRocha/storage-api/blob/24a356148b0e4a677cb8e9a92eb821321529393e/docs/assets/note-plane-0003-Vizualizar%20nota%20seleccionada.png" width="550" >  
+
+En cuento a editar una nota se otorna un espacio optimo para poder trabajar con la nota y da la oportunidad de cambiar todos los datos de la nota en el mismo sitio.
+
+
+### Objetivo
+El objetivo del frontend de Note-plane es el ser una herramienta pratica para el usuario, de manera que se intentara evitar cualquier problema que los usaurio puedan tener,
+ademas en el futuro se planea hacer mejoras en este aspecto, como tener elemento ajustables, todo con el proposto de facilitar una tarea que muchas personas hacen sin ningun 
+tipo de herramienta espesifica como esta.
