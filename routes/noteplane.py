@@ -79,9 +79,9 @@ def query_ns(*args, id=None, **kwargs):
 @app.get("/query/notes")
 def get_notes(*args, **kwargs):
     try:
-       respuesta = spesific()
+       respuesta = query_c()
     except:
-        raise bottle.HTTPError(500, "Error interno")
+        raise bottle.HTTPError(500, "Error")
     raise bottle.HTTPError(200, respuesta)
 
 

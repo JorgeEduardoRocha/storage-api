@@ -410,7 +410,7 @@ Se mostrara uan simulacion del funcionamiento esperado del proyecto con el propo
 
 En esta funcion se crea una nota nueva, ingresando todos los datos correctos.
 ```
-curl localhost:8080/noteplane/create_note -X POST -H "Content-Type: application/json" -d '{"name": "ejemplo final","category":"ejemplo","datee": "2012-12-12", "content":""}'
+curl localhost:8080/noteplane/create_note -X POST -H "Content-Type: application/json" -d '{"name": "ejemplo final","category":"ejemplo","datee": "2012-12-12", "body":""}'
 ```
 
 
@@ -422,7 +422,7 @@ curl localhost:8080/noteplane/create_note -X POST -H "Content-Type: application/
 
 En esta funcion se remplaza un json de una nota que se encuentre ya creada, para esto se require el nombre de la nota, que corresponde al nombre del archivo, para poder remplazarla.
 ```
-curl localhost:8080/noteplane/note/update -X POST -H "Content-Type: application/json" -d '{"name": "ejemplo12","category":"ejemplo","datee": "2010-12-12", "content":""}'
+curl localhost:8080/noteplane/update -X POST -H "Content-Type: application/json" -d '{"name": "ejemplo12","category":"ejemplo","datee": "2010-12-12", "body":""}'
 ```
 
 
@@ -444,7 +444,7 @@ curl localhost:8080/noteplane/query/notes
 
 En esta funcion se regresa una nota espesifica con su `name` el cual es un valor auto generado, que se genera atravez de la informacion que compone la nota.
 ```
-curl localhost:8080/noteplane/ejemplos1 -X GET
+curl localhost:8080/noteplane/ejemplo-juegos -X GET
 ```
 
 ### Crear una nueva categoria
@@ -475,10 +475,10 @@ curl localhost:8080/noteplane/query/category
 
 # Planeacion para frontend
 
-El proposito de la interfaz grafica es cumplir con los objetivos planteados desde el comienzo del proyecto, con lo que se busca una interfaz de usuario amigable, eficiente y que 
+El proposito de la interfaz grafica es cumplir con los objetivos planteados desde el comienzo del proyecto, con lo que se busca una interfaz de usuario amigable, eficiente y que
 corresponda con las funciones que el proyecto tiene.
 
-las funciones nesesarios son 
+las funciones nesesarios son
 - Crear notas
 - Crear categorias
 - Consultar notas
@@ -496,7 +496,7 @@ Como se puede observar en este dashboard se dan la mayoria de las funciones prin
 
 
 ###### Creacion de nota
-<img src="https://github.com/JorgeEduardoRocha/storage-api/blob/24a356148b0e4a677cb8e9a92eb821321529393e/docs/assets/note-plane-0001-Crear%20nota.png" width="550"> 
+<img src="https://github.com/JorgeEduardoRocha/storage-api/blob/24a356148b0e4a677cb8e9a92eb821321529393e/docs/assets/note-plane-0001-Crear%20nota.png" width="550">
 
 Al igual que en el ejemplo anterior el enfoque esta en no perder tiempo, la interfaz para crear una nota es simple pero duficiente para que no sea un inconveniente el crearla.
 
@@ -510,5 +510,5 @@ En cuento a editar una nota se otorna un espacio optimo para poder trabajar con 
 
 ### Objetivo
 El objetivo del frontend de Note-plane es el ser una herramienta pratica para el usuario, de manera que se intentara evitar cualquier problema que los usaurio puedan tener,
-ademas en el futuro se planea hacer mejoras en este aspecto, como tener elemento ajustables, todo con el proposto de facilitar una tarea que muchas personas hacen sin ningun 
+ademas en el futuro se planea hacer mejoras en este aspecto, como tener elemento ajustables, todo con el proposto de facilitar una tarea que muchas personas hacen sin ningun
 tipo de herramienta espesifica como esta.

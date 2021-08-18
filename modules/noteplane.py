@@ -102,18 +102,19 @@ def update_n(datee=None, name=None, category=None, body=None):
     )
     return datos
 
-"""
-    Funcion para consultar una nota
-    trabaja con el argumento
 
-     - id, Una cadena de texto autogenerada que corresponde a una nota (solo existe una id por nota y esta no debe repetirse).
-
-    Solo acepta una id creada argumento mediante la solicitud curl
-
-    Esta funcion regresara un diccionario con todas las notas que se encuentren almacenadas.
-"""
 #consultar nota espesificas
 def afun(id=None):
+    """
+        Funcion para consultar una nota
+        trabaja con el argumento
+
+         - id, Una cadena de texto autogenerada que corresponde a una nota (solo existe una id por nota y esta no debe repetirse).
+
+        Solo acepta una id creada argumento mediante la solicitud curl
+
+        Esta funcion regresara un diccionario con todas las notas que se encuentren almacenadas.
+    """
     query_result = query_storage(
         "noteplane/notes"
     )
