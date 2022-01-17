@@ -412,7 +412,7 @@ En esta funcion se crea una nota nueva, ingresando todos los datos correctos.
 ```
 curl localhost:8080/noteplane/create_note -X POST -H "Content-Type: application/json" -d '{"name": "ejemplo final","category":"ejemplo","datee": "2012-12-12", "body":""}'
 ```
-
+e
 
 ### Actualizar una nota
 - Metodo `Post` (sobre json ya existente)
